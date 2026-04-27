@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "GamerCoin",
   "colors": {
-    "primary": "#2AD46F",
-    "light": "#5DDF8F",
-    "dark": "#1FB85C"
+    "primary": "#E83C41",
+    "light": "#ED6064",
+    "dark": "#C53034"
   },
   "favicon": "/favicon.png",
   "navigation": {
