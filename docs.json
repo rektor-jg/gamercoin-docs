@@ -9,59 +9,169 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Welcome",
-            "pages": [
-              "index"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Welcome",
+                "pages": ["index"]
+              },
+              {
+                "group": "Tokenomics",
+                "pages": [
+                  "tokenomics/overview",
+                  "tokenomics/token-description",
+                  "tokenomics/contracts",
+                  "tokenomics/how-to-get",
+                  "tokenomics/distribution",
+                  "tokenomics/burn",
+                  "tokenomics/staking",
+                  "tokenomics/liquidity-mining",
+                  "tokenomics/community-tagging"
+                ]
+              },
+              {
+                "group": "Use Cases",
+                "pages": ["use-cases/education", "use-cases/partners"]
+              },
+              {
+                "group": "Roadmap",
+                "pages": [
+                  "roadmap/overview",
+                  "roadmap/journey-so-far",
+                  "roadmap/2024-highlights",
+                  "roadmap/whats-next-2025",
+                  "roadmap/future-goals"
+                ]
+              },
+              {
+                "group": "Resources",
+                "pages": ["useful-links", "resources/glossary"]
+              },
+              {
+                "group": "Legal",
+                "pages": [
+                  "legal/overview",
+                  "legal/legal-information",
+                  "legal/aml-cft",
+                  "legal/disclaimer"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "language": "pl",
+        "tabs": [
           {
-            "group": "Tokenomics",
-            "pages": [
-              "tokenomics/overview",
-              "tokenomics/token-description",
-              "tokenomics/how-to-get",
-              "tokenomics/distribution",
-              "tokenomics/burn",
-              "tokenomics/staking",
-              "tokenomics/liquidity-mining",
-              "tokenomics/community-tagging"
+            "tab": "Dokumentacja",
+            "groups": [
+              {
+                "group": "Wstęp",
+                "pages": ["pl/index"]
+              },
+              {
+                "group": "Tokenomia",
+                "pages": [
+                  "pl/tokenomics/overview",
+                  "pl/tokenomics/token-description",
+                  "pl/tokenomics/contracts",
+                  "pl/tokenomics/how-to-get",
+                  "pl/tokenomics/distribution",
+                  "pl/tokenomics/burn",
+                  "pl/tokenomics/staking",
+                  "pl/tokenomics/liquidity-mining",
+                  "pl/tokenomics/community-tagging"
+                ]
+              },
+              {
+                "group": "Zastosowania",
+                "pages": ["pl/use-cases/education", "pl/use-cases/partners"]
+              },
+              {
+                "group": "Roadmapa",
+                "pages": [
+                  "pl/roadmap/overview",
+                  "pl/roadmap/journey-so-far",
+                  "pl/roadmap/2024-highlights",
+                  "pl/roadmap/whats-next-2025",
+                  "pl/roadmap/future-goals"
+                ]
+              },
+              {
+                "group": "Zasoby",
+                "pages": ["pl/useful-links", "pl/resources/glossary"]
+              },
+              {
+                "group": "Informacje prawne",
+                "pages": [
+                  "pl/legal/overview",
+                  "pl/legal/legal-information",
+                  "pl/legal/aml-cft",
+                  "pl/legal/disclaimer"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "language": "kr",
+        "tabs": [
           {
-            "group": "Use Cases",
-            "pages": [
-              "use-cases/education",
-              "use-cases/partners"
-            ]
-          },
-          {
-            "group": "Roadmap",
-            "pages": [
-              "roadmap/overview",
-              "roadmap/journey-so-far",
-              "roadmap/2024-highlights",
-              "roadmap/whats-next-2025",
-              "roadmap/future-goals"
-            ]
-          },
-          {
-            "group": "Resources",
-            "pages": [
-              "useful-links"
-            ]
-          },
-          {
-            "group": "Legal",
-            "pages": [
-              "legal/overview",
-              "legal/legal-information",
-              "legal/aml-cft",
-              "legal/disclaimer"
+            "tab": "문서",
+            "groups": [
+              {
+                "group": "환영합니다",
+                "pages": ["kr/index"]
+              },
+              {
+                "group": "토크노믹스",
+                "pages": [
+                  "kr/tokenomics/overview",
+                  "kr/tokenomics/token-description",
+                  "kr/tokenomics/contracts",
+                  "kr/tokenomics/how-to-get",
+                  "kr/tokenomics/distribution",
+                  "kr/tokenomics/burn",
+                  "kr/tokenomics/staking",
+                  "kr/tokenomics/liquidity-mining",
+                  "kr/tokenomics/community-tagging"
+                ]
+              },
+              {
+                "group": "사용 사례",
+                "pages": ["kr/use-cases/education", "kr/use-cases/partners"]
+              },
+              {
+                "group": "로드맵",
+                "pages": [
+                  "kr/roadmap/overview",
+                  "kr/roadmap/journey-so-far",
+                  "kr/roadmap/2024-highlights",
+                  "kr/roadmap/whats-next-2025",
+                  "kr/roadmap/future-goals"
+                ]
+              },
+              {
+                "group": "리소스",
+                "pages": ["kr/useful-links", "kr/resources/glossary"]
+              },
+              {
+                "group": "법적 고지",
+                "pages": [
+                  "kr/legal/overview",
+                  "kr/legal/legal-information",
+                  "kr/legal/aml-cft",
+                  "kr/legal/disclaimer"
+                ]
+              }
             ]
           }
         ]
@@ -90,7 +200,7 @@
     "links": [
       {
         "label": "Community",
-        "href": "https://discord.gg/gamerhash"
+        "href": "https://gamerhash.com/en/l/Myw09"
       }
     ],
     "primary": {
@@ -101,9 +211,11 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/GamerHashGHX",
-      "discord": "https://discord.gg/gamerhash",
-      "telegram": "https://t.me/GamerHash"
+      "x": "https://twitter.com/GamerHashCom",
+      "discord": "https://gamerhash.com/en/l/Myw09",
+      "telegram": "https://gamerhash.com/en/l/l9Nb9",
+      "youtube": "https://www.youtube.com/channel/UCv6axnIN6jczLcLraH4cK6g",
+      "medium": "https://medium.com/we-are-the-gamerhash"
     }
   }
 }

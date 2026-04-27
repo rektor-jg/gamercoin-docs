@@ -1,0 +1,63 @@
+---
+title: "Contracts & Audits"
+description: "Canonical GHX deployments, technical specs, and audit status."
+---
+
+<Warning>
+Always verify the contract address against this page or [gamercoin.com](https://gamercoin.com) before transacting. Tokens with similar names exist on every major chain. The only authoritative addresses are listed below.
+</Warning>
+
+## Deployments
+
+<Tabs>
+  <Tab title="Ethereum">
+    | Field | Value |
+    | --- | --- |
+    | Standard | ERC-20 |
+    | Address | [`0x728f30fa2f100742c7949d1961804fa8e0b1387d`](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+    | Decimals | 18 |
+    | Explorer | [Etherscan](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+    | Primary DEX | [Uniswap (GHX/WETH)](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+  </Tab>
+  <Tab title="BNB Chain">
+    | Field | Value |
+    | --- | --- |
+    | Standard | BEP-20 |
+    | Address | [`0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4`](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
+    | Decimals | 18 |
+    | Explorer | [BscScan](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
+    | Primary DEX | [PancakeSwap (GHX/WBNB)](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) |
+  </Tab>
+  <Tab title="Solana">
+    | Field | Value |
+    | --- | --- |
+    | Standard | SPL |
+    | Mint | [`Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7`](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+    | Decimals | 9 |
+    | Explorer | [Solscan](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+    | Primary DEX | [Raydium (GHX/SOL)](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+  </Tab>
+</Tabs>
+
+<Note>
+**Decimals note.** Ethereum and BNB Chain contracts use 18 decimals (standard ERC-20/BEP-20). The Solana SPL token uses 9 decimals (Solana convention). Always read decimals from the contract before formatting amounts in code.
+</Note>
+
+## Bridging
+
+GHX moves between chains via:
+
+- [cBridge](https://cbridge.celer.network/) — Ethereum ↔ BNB Chain
+- Bridge from/to Solana via integrations announced in 2025 (Raydium, Jupiter, Solscan). See the [2025 plan](/roadmap/whats-next-2025).
+
+When bridging, supply on the source chain is locked or burned and equivalent supply minted on the destination chain. Total cross-chain supply remains conserved minus burns.
+
+## Audits
+
+<Note>
+Public smart-contract audit reports are not currently linked from this documentation. If you require an audit attestation for due diligence, contact the GamerHash team via the [community channels](/useful-links#social).
+</Note>
+
+## Reporting issues
+
+If you discover a security issue with any GHX deployment, please disclose responsibly via the official channels in [Useful Links](/useful-links). Do not post unconfirmed vulnerabilities publicly.
