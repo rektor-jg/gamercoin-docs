@@ -3,11 +3,11 @@
   "theme": "mint",
   "name": "GamerCoin",
   "colors": {
-    "primary": "#F59E0B",
-    "light": "#FBBF24",
-    "dark": "#D97706"
+    "primary": "#346DDB",
+    "light": "#5B8AE6",
+    "dark": "#2554B8"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
       {
@@ -83,8 +83,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
