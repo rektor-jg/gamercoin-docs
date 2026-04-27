@@ -1,0 +1,109 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "GamerCoin",
+  "colors": {
+    "primary": "#F59E0B",
+    "light": "#FBBF24",
+    "dark": "#D97706"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Welcome",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "Tokenomics",
+            "pages": [
+              "tokenomics/overview",
+              "tokenomics/token-description",
+              "tokenomics/how-to-get",
+              "tokenomics/distribution",
+              "tokenomics/burn",
+              "tokenomics/staking",
+              "tokenomics/liquidity-mining",
+              "tokenomics/community-tagging"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "use-cases/education",
+              "use-cases/partners"
+            ]
+          },
+          {
+            "group": "Roadmap",
+            "pages": [
+              "roadmap/overview",
+              "roadmap/journey-so-far",
+              "roadmap/2024-highlights",
+              "roadmap/whats-next-2025",
+              "roadmap/future-goals"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "useful-links"
+            ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "legal/overview",
+              "legal/legal-information",
+              "legal/aml-cft",
+              "legal/disclaimer"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "GamerHash Docs",
+          "href": "https://docs.gamerhash.com",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Website",
+          "href": "https://gamercoin.com",
+          "icon": "globe"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Community",
+        "href": "https://discord.gg/gamerhash"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get GHX",
+      "href": "https://gamercoin.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/GamerHashGHX",
+      "discord": "https://discord.gg/gamerhash",
+      "telegram": "https://t.me/GamerHash"
+    }
+  }
+}
