@@ -7,6 +7,20 @@ The Token Generation Event (TGE) took place on **31 December 2020**. Between Dec
 
 ## TGE allocation
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'pie1':'#E83C41','pie2':'#F59E0B','pie3':'#2AD46F','pie4':'#3B82F6','pie5':'#A855F7','pie6':'#EC4899','pie7':'#14B8A6','pie8':'#F97316','pie9':'#84CC16'}}}%%
+pie showData
+    "Token Contributors" : 36.6
+    "Team" : 15
+    "Foundation" : 14
+    "Ecosystem Fund" : 12
+    "Strategic Partnership" : 5
+    "Community & Game Mining" : 5
+    "Liquidity Reserve" : 4.4
+    "Advisors" : 4
+    "Marketing" : 4
+```
+
 | Bucket | Share | Purpose |
 | --- | --- | --- |
 | Token Contributors | 36.6% | Private and seed sale buyers (with bonus tokens vested) |
@@ -20,6 +34,38 @@ The Token Generation Event (TGE) took place on **31 December 2020**. Between Dec
 | Marketing | 4.0% | User acquisition, brand, conferences |
 
 ## Vesting schedule
+
+```mermaid
+gantt
+    title GHX vesting timeline (months from TGE)
+    dateFormat X
+    axisFormat %s
+    section Seed & Private
+    Vesting :0, 9
+    section Liquidity Reserve
+    Instant :0, 1
+    section Community & Game Mining
+    Cliff :crit, 0, 1
+    Vesting :1, 33
+    section Advisors
+    Cliff :crit, 0, 3
+    Vesting :3, 12
+    section Marketing
+    Cliff :crit, 0, 3
+    Vesting :3, 12
+    section Ecosystem Fund
+    Cliff :crit, 0, 1
+    Vesting :1, 60
+    section Team
+    Cliff :crit, 0, 12
+    Vesting :12, 30
+    section Foundation
+    Cliff :crit, 0, 12
+    Vesting :12, 48
+    section Strategic Partnership
+    Cliff :crit, 0, 24
+    Vesting :24, 36
+```
 
 | Bucket | Cliff | Schedule | Total duration |
 | --- | --- | --- | --- |

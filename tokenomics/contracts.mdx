@@ -45,10 +45,23 @@ Always verify the contract address against this page or [gamercoin.com](https://
 
 ## Bridging
 
-GHX moves between chains via:
+```mermaid
+graph LR
+    ETH["Ethereum<br/>ERC-20"]:::eth
+    BSC["BNB Chain<br/>BEP-20"]:::bsc
+    SOL["Solana<br/>SPL"]:::sol
+
+    ETH <-->|cBridge| BSC
+    BSC <-->|Raydium / Jupiter| SOL
+    ETH <-->|2025 Q1| SOL
+
+    classDef eth fill:#627EEA,stroke:#4259c8,color:#fff
+    classDef bsc fill:#F0B90B,stroke:#c69909,color:#000
+    classDef sol fill:#9945FF,stroke:#7e2bdc,color:#fff
+```
 
 - [cBridge](https://cbridge.celer.network/) — Ethereum ↔ BNB Chain
-- Bridge from/to Solana via integrations announced in 2025 (Raydium, Jupiter, Solscan). See the [2025 plan](/roadmap/whats-next-2025).
+- Solana bridge via Raydium / Jupiter (added 2025 Q1). See the [2025 plan](/roadmap/whats-next-2025).
 
 When bridging, supply on the source chain is locked or burned and equivalent supply minted on the destination chain. Total cross-chain supply remains conserved minus burns.
 
