@@ -1,0 +1,154 @@
+---
+title: "How to Stake GHX"
+description: "Step-by-step walkthrough: stake GHX on Ethereum or BNB Chain to earn up to 25% APR."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+This guide walks through staking GHX from zero to earning. Estimated time: **5–10 minutes** plus on-chain confirmation time.
+
+## What you'll need
+
+<CardGroup cols={2}>
+  <Card title="A Web3 wallet" icon="wallet">
+    MetaMask, Rabby, or any wallet that supports Ethereum and BNB Chain (e.g. Trust Wallet).
+  </Card>
+  <Card title="GHX tokens" icon="coins">
+    On the chain you want to stake. See [How to Get GHX](/tokenomics/how-to-get).
+  </Card>
+  <Card title="A small amount of native gas" icon="fire">
+    ETH for Ethereum or BNB for BSC. Used to pay transaction fees.
+  </Card>
+  <Card title="A target lock period" icon="clock">
+    Flexible, 3, 6, or 12 months. Higher APR for longer locks. See [Staking](/tokenomics/staking).
+  </Card>
+</CardGroup>
+
+## Walkthrough
+
+<Steps>
+  <Step title="Open the staking dashboard">
+    Go to [staking.gamercoin.com](https://staking.gamercoin.com/).
+
+    {/* TODO: screenshot — landing page of staking dashboard */}
+    {/* Suggested filename: /images/tutorials/staking-01-landing.png */}
+  </Step>
+
+  <Step title="Connect your wallet">
+    Click **Connect Wallet** in the top right. Pick your wallet provider and approve the connection request.
+
+    <Tip>
+    If your wallet is on the wrong chain, the dashboard will prompt you to switch. Approve the network switch when asked.
+    </Tip>
+
+    {/* TODO: screenshot — wallet connect modal */}
+    {/* Suggested filename: /images/tutorials/staking-02-connect.png */}
+  </Step>
+
+  <Step title="Select the chain">
+    Pick <Eth /> or <Bsc /> at the top of the dashboard. Each has its own pools.
+
+    {/* TODO: screenshot — chain selector */}
+    {/* Suggested filename: /images/tutorials/staking-03-chain.png */}
+  </Step>
+
+  <Step title="Choose a pool">
+    Pools differ by lock period and APR:
+
+    | Lock | APR (ETH) | APR (BSC) |
+    | --- | --- | --- |
+    | Flexible | 10% | 6% |
+    | 3 months | 10% | 10% |
+    | 6 months | 18% | 18% |
+    | 12 months | 25% | 25% |
+
+    <Warning>
+    Locked pools cannot be withdrawn before the lock expires. Pick **Flexible** if you might need liquidity.
+    </Warning>
+
+    {/* TODO: screenshot — pool list with APRs */}
+    {/* Suggested filename: /images/tutorials/staking-04-pools.png */}
+  </Step>
+
+  <Step title="Approve the GHX contract">
+    First-time stakers must approve the staking contract to spend GHX. Click **Approve** and confirm in your wallet.
+
+    <Note>
+    Approval is a one-time action per chain. You will not need to approve again for the same chain.
+    </Note>
+
+    {/* TODO: screenshot — approve transaction in wallet */}
+    {/* Suggested filename: /images/tutorials/staking-05-approve.png */}
+  </Step>
+
+  <Step title="Enter amount and stake">
+    Enter how much GHX you want to stake (or click **Max**), then click **Stake**. Confirm the transaction in your wallet.
+
+    {/* TODO: screenshot — stake amount input + confirm */}
+    {/* Suggested filename: /images/tutorials/staking-06-stake.png */}
+  </Step>
+
+  <Step title="Verify your position">
+    After the transaction confirms (usually under a minute), your stake appears in **My Stakes**. Rewards accrue continuously.
+
+    {/* TODO: screenshot — my stakes view */}
+    {/* Suggested filename: /images/tutorials/staking-07-position.png */}
+  </Step>
+</Steps>
+
+## Claiming rewards
+
+Rewards accrue per block. To claim:
+
+1. Open the staking dashboard while connected to the correct chain.
+2. Find your active stake under **My Stakes**.
+3. Click **Claim**. Confirm the transaction.
+
+Claimed rewards land in the same wallet that staked. There is no minimum claim amount — but each claim is an on-chain transaction with gas fees, so claiming small amounts is uneconomical.
+
+## Unstaking
+
+| Pool type | Unstake behavior |
+| --- | --- |
+| Flexible | Withdraw any time. No penalty. |
+| Locked (3/6/12 months) | Cannot withdraw before the lock expires. After expiry, withdraw any time. |
+
+<Steps>
+  <Step title="Wait for the lock to expire (locked pools only)">
+    The dashboard shows a countdown for each locked stake.
+  </Step>
+  <Step title="Click Unstake">
+    Find the position under **My Stakes** and click **Unstake**. Approve the transaction in your wallet.
+  </Step>
+  <Step title="Verify the receipt">
+    GHX (plus any unclaimed rewards) returns to your wallet on-chain confirmation.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My GHX is on the wrong chain">
+    Use [cBridge](https://cbridge.celer.network/) to move GHX from <Eth /> to <Bsc /> or vice versa. See [Contracts & Bridging](/tokenomics/contracts#bridging).
+  </Accordion>
+  <Accordion title="Transaction is stuck pending">
+    Increase the gas price in your wallet, or cancel and retry. On Ethereum during high-fee periods, set a higher priority fee.
+  </Accordion>
+  <Accordion title="I see my balance but the dashboard says zero">
+    Confirm you are connected to the same wallet address you staked from. Refresh the page.
+  </Accordion>
+  <Accordion title="APR shown is lower than advertised">
+    APRs are pool-capacity-dependent. The 25% headline applies when pools are fully subscribed. Effective APR may be lower if the pool is over-allocated. See the [Staking notes](/tokenomics/staking).
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Liquidity Mining" icon="droplet" href="/tokenomics/liquidity-mining">
+    Earn additional GHX by providing GHX/BNB LP tokens.
+  </Card>
+  <Card title="Track your position" icon="chart-line" href="/resources/track-ghx">
+    Live charts and aggregator data.
+  </Card>
+</CardGroup>

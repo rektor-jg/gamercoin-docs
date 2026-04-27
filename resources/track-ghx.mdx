@@ -1,0 +1,44 @@
+---
+title: "Track GHX"
+description: "Live price, charts, and market data for GamerCoin across all sources."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+## Aggregators
+
+<CardGroup cols={3}>
+  <Card title="CoinGecko" icon="chart-line" href="https://www.coingecko.com/en/coins/gamercoin">
+    Live price, marketcap, supply, volume, historical chart.
+  </Card>
+  <Card title="CoinMarketCap" icon="chart-pie" href="https://coinmarketcap.com/currencies/gamercoin/">
+    Market data, rankings, and exchange listings.
+  </Card>
+  <Card title="DexScreener" icon="arrow-trend-up" href="https://dexscreener.com/search?q=GHX">
+    DEX trading activity across all chains.
+  </Card>
+</CardGroup>
+
+## Live chart
+
+<Frame caption="GHX/WBNB live chart on PancakeSwap (BNB Chain). Powered by DexScreener.">
+  <iframe
+    src="https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4?embed=1&theme=dark&trades=0&info=0"
+    width="100%"
+    height="500"
+    style={{border:'1px solid rgba(255,255,255,0.1)',borderRadius:'12px'}}
+    title="GHX live chart on DexScreener"
+  />
+</Frame>
+
+## Per-chain tracking
+
+| Chain | Block explorer | DEX activity |
+| --- | --- | --- |
+| <Eth /> | [Etherscan](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) | [DexScreener Ethereum](https://dexscreener.com/ethereum/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+| <Bsc /> | [BscScan](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) | [DexScreener BSC](https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
+| <Sol /> | [Solscan](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | [DexScreener Solana](https://dexscreener.com/solana/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+
+<Note>
+Always verify the contract address against [Contracts & Audits](/tokenomics/contracts) before relying on third-party data — fake GHX listings exist on every major aggregator.
+</Note>

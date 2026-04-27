@@ -8,6 +8,17 @@
     "dark": "#C53034"
   },
   "favicon": "/favicon.png",
+  "banner": {
+    "content": "Earn up to 25% APR on Ethereum, BNB Chain, and Solana — [stake your GHX](https://staking.gamercoin.com/)",
+    "dismissible": true
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity", "mcp", "cursor", "vscode"]
+  },
+  "styling": {
+    "eyebrows": "section",
+    "codeblocks": "system"
+  },
   "navigation": {
     "languages": [
       {
@@ -50,8 +61,12 @@
                 ]
               },
               {
+                "group": "Tutorials",
+                "pages": ["tutorials/how-to-stake-ghx"]
+              },
+              {
                 "group": "Resources",
-                "pages": ["useful-links", "resources/glossary"]
+                "pages": ["useful-links", "resources/track-ghx", "resources/glossary"]
               },
               {
                 "group": "Legal",
