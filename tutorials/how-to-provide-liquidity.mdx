@@ -1,0 +1,145 @@
+---
+title: "How to Provide Liquidity"
+description: "Step-by-step: add liquidity on Uniswap, PancakeSwap, or Raydium, then stake the LP tokens for bonus GHX rewards."
+---
+
+Liquidity mining stacks two yield streams: trading fees from the LP pool and bonus GHX from the GamerHash program. To unlock both, you'll need to add liquidity on a DEX, receive LP tokens, then stake those LP tokens at [staking.gamercoin.com](https://staking.gamercoin.com/).
+
+Estimated time: **10–15 minutes** plus on-chain confirmations.
+
+<Warning>
+Providing liquidity exposes you to **impermanent loss** when the relative prices of GHX and the paired asset diverge. Read [Binance Academy on impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) before committing capital.
+</Warning>
+
+## What you'll need
+
+<CardGroup cols={2}>
+  <Card title="A Web3 wallet" icon="wallet">
+    For Ethereum or BNB Chain: MetaMask, Rabby, or Trust Wallet. For Solana: Phantom, Solflare, or Backpack.
+  </Card>
+  <Card title="GHX + paired asset" icon="scale-balanced">
+    Roughly equal USD value of each — GHX paired with ETH (Ethereum), BNB (BNB Chain), or SOL (Solana).
+  </Card>
+  <Card title="Native gas" icon="fire">
+    A small buffer of ETH / BNB / SOL beyond the paired-asset amount, to pay transaction fees.
+  </Card>
+  <Card title="A DEX of choice" icon="arrows-rotate">
+    Uniswap (Ethereum), PancakeSwap (BNB Chain), or Raydium (Solana).
+  </Card>
+</CardGroup>
+
+## Step 1 — Add liquidity on a DEX
+
+Pick the chain where your GHX lives. If it's on the wrong chain, bridge it first — see [Contracts & Bridging](/tokenomics/contracts#bridging).
+
+<Tabs>
+  <Tab title="Ethereum (Uniswap)">
+    1. Open [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) and connect your wallet.
+    2. Navigate to **Pool** → **New Position**.
+    3. Pick the **GHX / ETH** pair. The token list won't show GHX by default — paste the contract address `0x728f30fa2f100742c7949d1961804fa8e0b1387d` to import it.
+    4. Set the deposit amounts. The interface auto-balances — enter one side and it fills the other.
+    5. Approve the GHX contract (one-time per chain), then confirm **Add Liquidity**.
+    6. Once the transaction confirms, your **LP tokens** are in your wallet.
+  </Tab>
+  <Tab title="BNB Chain (PancakeSwap)">
+    1. Open [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) and connect your wallet.
+    2. Navigate to **Liquidity** → **Add Liquidity**.
+    3. Pick the **GHX / WBNB** pair. Paste `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` if GHX isn't auto-detected.
+    4. Set the deposit amounts.
+    5. Approve the GHX contract (one-time per chain), then confirm **Supply**.
+    6. Your **Cake-LP tokens** appear in your wallet on confirmation.
+  </Tab>
+  <Tab title="Solana (Raydium)">
+    1. Open [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) and connect your Solana wallet.
+    2. Navigate to **Liquidity** → **Create Position**.
+    3. Pick the **GHX / SOL** pool.
+    4. Set the deposit amounts and confirm.
+    5. Your **LP tokens** appear in your wallet on confirmation. Solana uses a different model than EVM — there's no separate "approve" step.
+  </Tab>
+</Tabs>
+
+{/* TODO: screenshot — DEX add-liquidity confirm screen, one per chain */}
+{/* Suggested filenames: /images/tutorials/lp-01-uniswap.png, lp-01-pancakeswap.png, lp-01-raydium.png */}
+
+## Step 2 — Stake your LP tokens
+
+LP tokens by themselves earn swap fees only. To unlock the bonus GHX rewards, you need to stake them.
+
+<Steps>
+  <Step title="Open the staking dashboard">
+    Go to [staking.gamercoin.com](https://staking.gamercoin.com/) and connect the same wallet you used on the DEX.
+  </Step>
+  <Step title="Switch to Liquidity Mining">
+    Navigate to the **Liquidity Mining** section (separate from the **Staking** tab — make sure you pick the LP pools, not the GHX-only pools).
+  </Step>
+  <Step title="Pick the matching pool">
+    Pick the pool that matches the LP tokens you just received — GHX/ETH on Ethereum, GHX/BNB on BNB Chain, or GHX/SOL on Solana.
+  </Step>
+  <Step title="Approve the LP contract (Ethereum / BNB Chain only)">
+    First-time LP stakers must approve the program to move their LP tokens. Confirm in your wallet.
+
+    <Note>
+    Approval is one-time per chain. Solana uses a different model — there's no separate approval step.
+    </Note>
+  </Step>
+  <Step title="Stake the LP tokens">
+    Enter the amount of LP tokens to stake (or click **Max**) and confirm the transaction in your wallet.
+  </Step>
+  <Step title="Verify the position">
+    Your staked LP appears under **My Positions** on the dashboard. Both fee earnings (on the DEX side) and bonus GHX (on the program side) accrue continuously.
+  </Step>
+</Steps>
+
+## Claiming bonus GHX
+
+The bonus GHX rewards from the GamerHash program are claimed at [staking.gamercoin.com](https://staking.gamercoin.com/):
+
+1. Open the dashboard while connected to the correct chain.
+2. Find your LP position under **My Positions**.
+3. Click **Claim**. Confirm the transaction.
+
+Swap-fee earnings stay inside the LP token automatically — they compound into the LP value and are realized when you remove liquidity (Step below).
+
+## Removing liquidity
+
+Removing your position is the reverse of entering it: unstake LP tokens, then break the LP token back into the underlying pair.
+
+<Steps>
+  <Step title="Unstake LP tokens">
+    On the staking dashboard, find your LP position and click **Unstake**. Confirm the transaction. LP tokens (plus any unclaimed bonus GHX) return to your wallet.
+  </Step>
+  <Step title="Remove liquidity on the DEX">
+    Go back to the DEX (Uniswap / PancakeSwap / Raydium) and open your position. Click **Remove Liquidity**. The LP token burns; you receive GHX **and** the paired asset back, in whatever ratio the pool currently holds — this is when impermanent loss (or gain) is realized.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="GHX doesn't show in the DEX token list">
+    Paste the contract address manually. See [Contracts & Audits](/tokenomics/contracts) for canonical addresses on each chain.
+  </Accordion>
+  <Accordion title="My LP tokens are missing from the staking dashboard">
+    Confirm you are on the correct chain (the dashboard switcher), and that you're connected with the same wallet you used on the DEX. Refresh after switching networks.
+  </Accordion>
+  <Accordion title="The 'Stake' button is greyed out">
+    Either you haven't approved the LP contract yet (Step 4 above), or the LP-token amount you entered exceeds your wallet balance.
+  </Accordion>
+  <Accordion title="My APR is much lower than advertised">
+    LP-mining APR depends on pool size and total staked LP. As more capital enters the pool, per-staker rewards drop. Check current numbers on the dashboard before committing.
+  </Accordion>
+  <Accordion title="I'm worried about impermanent loss">
+    Impermanent loss is realized only when you remove liquidity at a price ratio different from your deposit. If GHX and the paired asset move together, IL is small. If they diverge sharply, IL can exceed the bonus GHX you earned. Read [Binance Academy on IL](https://academy.binance.com/en/articles/impermanent-loss-explained) for the math.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="How to Stake GHX" icon="lock" href="/tutorials/how-to-stake-ghx">
+    No paired asset, no impermanent loss — just lock GHX for fixed APR.
+  </Card>
+  <Card title="Track your position" icon="chart-line" href="/resources/track-ghx">
+    Live pool data on DexScreener and aggregator pages.
+  </Card>
+</CardGroup>

@@ -1,39 +1,47 @@
 ---
 title: "Liquidity Mining"
-description: "Provide GHX/BNB liquidity on PancakeSwap and earn additional GHX."
+description: "Dostarcz płynność GHX na Uniswapie, PancakeSwapie albo Raydium i zarabiaj opłaty plus dodatkowe nagrody GHX."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+Liquidity mining pozwala zarobić GHX **na górze** standardowych opłat swap, które dostajesz dostarczając płynność. Dwa strumienie yieldu się dodają: opłaty z poolu i bonusowe GHX z programu GamerHash.
 
-Liquidity mining lets you earn GHX on top of standard LP swap fees by staking GHX/BNB LP tokens generated on PancakeSwap.
+Dashboard do trackowania i claimowania nagród programu znajdziesz na [staking.gamercoin.com](https://staking.gamercoin.com/).
 
-## Where it runs
+## Gdzie działa
 
-| | |
-| --- | --- |
-| Network | BNB Chain only |
-| LP pair | GHX/BNB on PancakeSwap |
-| Program dashboard | [staking.gamercoin.com](https://staking.gamercoin.com/) |
+| Sieć | DEX | Para | Dostępne od |
+| --- | --- | --- | --- |
+| Ethereum | [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | GHX/WETH | Pierwotny launch |
+| BNB Chain | [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | GHX/WBNB | Pierwotny launch |
+| Solana | [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | GHX/SOL | 2025 Q2 |
 
 <Note>
-GHX in ERC-20 form must be bridged to BEP-20 before adding liquidity. Use [cBridge](https://cbridge.celer.network/) or another supported bridge.
+Upewnij się, że GHX masz na właściwej sieci przed dodaniem płynności. Jeśli token jest na złej sieci, najpierw zbridguj — zobacz [Kontrakty i bridging](/pl/tokenomics/contracts#bridging).
 </Note>
 
-## How returns work
+## Jak działają zyski
 
-You earn from two sources:
+Zarabiasz z dwóch źródeł za każdym razem, kiedy twoja pozycja LP jest w poolu:
 
-1. A share of swap fees paid by traders using the GHX/BNB pool (proportional to your LP share).
-2. Additional GHX rewards from the GamerHash liquidity-mining program.
+1. **Opłaty swap** — udział w każdej transakcji idącej przez pool, proporcjonalny do twojego udziału w LP.
+2. **Nagrody LP od GamerHash** — bonusowe GHX wypłacane przez program GamerHash za zstakowane tokeny LP.
 
-Liquidity-mining APRs are typically higher than staking APRs.
+APR liquidity miningu jest zwykle wyższe niż przy zwykłym stakingu, bo kompensuje ryzyko i złożoność dostarczania płynności.
 
 <Warning>
-Providing liquidity exposes you to **impermanent loss** when the relative prices of GHX and BNB diverge from your deposit ratio. Read [Binance Academy on impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) before participating.
+Dostarczanie płynności wystawia cię na **impermanent loss**, kiedy względne ceny GHX i drugiego aktywa rozchodzą się od stosunku, w jakim wpłaciłeś. Im większa rozbieżność, tym większa strata w porównaniu do zwykłego trzymania obu tokenów. Przeczytaj [Binance Academy o impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) zanim zaangażujesz kapitał.
 </Warning>
 
-## Reference
+## Liquidity mining vs staking
 
-- [It's liquidity time! Stake GHX/BNB LP tokens and earn](https://medium.com/we-are-the-gamerhash/its-liquidity-time-stake-ghx-bnb-lp-tokens-and-earn-e8eef2c94c3f) — step-by-step Medium guide.
+| | Staking | Liquidity mining |
+| --- | --- | --- |
+| Wymagany kapitał | Tylko GHX | GHX **+** drugi token (ETH / BNB / SOL) |
+| Źródła yieldu | Nagrody APR | Opłaty swap **+** bonusowy GHX |
+| Typowe APR | Do 25% | Zwykle wyższe niż staking |
+| Główne ryzyko | Niepłynność na czas locka | **Impermanent loss** + ryzyko smart kontraktu |
+| Dla kogo | Holderzy chcący prostego, przewidywalnego yieldu | Aktywni użytkownicy komfortowi z mechanikami DeFi |
+
+## Materiały
+
+- [It's liquidity time! Stake GHX/BNB LP tokens and earn](https://medium.com/we-are-the-gamerhash/its-liquidity-time-stake-ghx-bnb-lp-tokens-and-earn-e8eef2c94c3f) — Medium walkthrough dla poolu na BNB Chain.

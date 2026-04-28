@@ -1,0 +1,64 @@
+---
+title: "Roadmapa"
+description: "Skąd przyszliśmy, co zostało dostarczone i dokąd idziemy."
+---
+
+Roadmapa jest delivery-driven: zadania są śledzone kwartałami i oznaczane jako shipped po wdrożeniu. Timeline poniżej podsumowuje platformę od launcha w 2017 do obecnego fokusu na rozproszonym compute dla AI.
+
+## Timeline
+
+<Frame>
+  <img src="/images/roadmap-milestones.png" alt="Kamienie milowe GamerHash i GHX od launcha GamerHash Miner App w 2017 po zamknięcie miningu i pełny pivot do AI compute w 2026" />
+</Frame>
+
+## Skąd przyszliśmy
+
+GamerHash wystartował w listopadzie 2017 jako desktop klient płacący userom za udostępnianie bezczynnego czasu GPU. W sierpniu 2018 platforma miała ~300 000 zarejestrowanych userów; dziś ma blisko **800 000**. Natywny token GHX wystartował podczas TGE **31 grudnia 2020**, z pierwszym listingiem na Bithumbie w kwietniu 2021. Siedem rund buyback-and-burn między grudniem 2021 a czerwcem 2022 trwale usunęło **8,1% podaży**.
+
+Strategiczny pivot w stronę compute dla AI zaczął się, gdy open-source'owe modele AI stworzyły popyt na rozproszoną moc GPU poza miningiem krypto. **Mining został trwale wygaszony 31 stycznia 2026** — platforma teraz monetyzuje wkład GPU wyłącznie przez zadania inference AI.
+
+## Co weszło ostatnio
+
+Wybrane highlighty z ostatnich 18 miesięcy. Pełne kwartalne delivery logi znajdziesz w community updates na [Medium GamerHasha](https://medium.com/we-are-the-gamerhash).
+
+**2024**
+- GamerHash AI App skalowany przez image generation (Sana, DreamShaper, warianty Stable Diffusion) i wdrożenia LLM (Llama 3.1/3.2, Qwen 2.5, Gemma 2, PHI-4, DeepSeek).
+- Earning module wszedł w testy wewnętrzne.
+- Stats page, mapa urządzeń, pełny redesign strony.
+
+**2025**
+- **Multi-chain staking i LP**: Solana dołącza do Ethereum i BNB Chain.
+- **Rozszerzenie bridge'a**: Ethereum ↔ Solana przez integracje Raydium / Jupiter.
+- **Publiczny launch deAPI**: API rozproszonego compute z playgroundem (text-to-image, text-to-speech, image-to-text, video-to-text). Teraz oficjalny węzeł [n8n](https://n8n.io).
+- **Modele wideo**: image-to-video, text-to-video (LTX-Video, LTX-2.3) działające lokalnie na GPU userów.
+- **GamerHash Mobile**: support najnowszego iOS, wypłaty USDC.
+
+**Wczesny 2026**
+- Mining trwale zakończony; platforma w pełni na compute AI.
+- LTX-2.3 video generation wdrożone lokalnie po wyłączeniu Sory przez OpenAI.
+- deAPI jako oficjalny węzeł n8n; ponad 6 000 zarejestrowanych developerów.
+
+## Co dalej
+
+Aktywne i planowane prace skupiają się na trzech wątkach:
+
+**Głębsze możliwości AI** — moduły multimodalne (upload obrazów i PDF-ów, interakcja w czacie), text-to-speech i voice transcription, custom LoRA i modele uploadowane przez userów, ulepszenia image-to-video.
+
+**Skalowanie deAPI** — płatności Stripe, domyślne ustawienia modeli, system emaili, rozszerzony playground (wersja lite i full).
+
+**Fundamenty platformy** — odświeżone dashboardy, Web3 login, ulepszenia version-managementu, refresh control panelu.
+
+## Kierunek długoterminowy
+
+Poza planem kwartalnym, cztery zakłady kształtują dłuższy horyzont:
+
+- **Jedna apka AI, wszystkie open-source'owe modele.** Pojedynczy klient uruchamiający najpopularniejsze open-source'owe modele do obrazów, wideo, głosu i tekstu — lokalnie na GPU usera.
+- **Zarabianie podczas używania.** Wkład GPU monetyzowany w trakcie aktywnego korzystania z narzędzi AI, eliminując trade-off między *używać AI* a *zarabiać na AI*.
+- **Rozproszona sieć compute.** Globalna pula konsumenckich GPU dostępna dla projektów AI, deweloperów i enterprise przez publiczne API (zobacz [deAPI](https://deapi.ai)).
+- **Multi-chain GHX.** Dalszy bridging i rozszerzanie zastosowań na Ethereum, BNB Chain i Solanie.
+
+## Materiały
+
+- [GamerHash na Medium](https://medium.com/we-are-the-gamerhash) — comiesięczne community updates, deep-dive'y i ogłoszenia.
+- [Why $GHX isn't just another token](https://medium.com/we-are-the-gamerhash/why-ghx-isnt-just-another-token-1ce77aa720e4) — kontekst tokenomii opartej na infrastrukturze (luty 2026).
+- [From Mining to AI: GamerHash Evolution](https://medium.com/we-are-the-gamerhash/from-mining-to-ai-the-gamerhash-evolution-75bf96424530) — strategiczny pivot słowami zespołu.

@@ -1,35 +1,47 @@
 ---
 title: "Liquidity Mining"
-description: "Provide GHX/BNB liquidity on PancakeSwap and earn additional GHX."
+description: "Provide GHX liquidity on Uniswap, PancakeSwap, or Raydium and earn fees plus additional GHX rewards."
 ---
 
-Liquidity mining lets you earn GHX on top of standard LP swap fees by staking GHX/BNB LP tokens generated on PancakeSwap.
+Liquidity mining lets you earn GHX **on top of** the standard LP swap fees you'd already collect by providing liquidity. Two yield streams stack: trading fees from the pool and bonus GHX from the GamerHash program.
+
+The dashboard for tracking and claiming program rewards is at [staking.gamercoin.com](https://staking.gamercoin.com/).
 
 ## Where it runs
 
-| | |
-| --- | --- |
-| Network | BNB Chain only |
-| LP pair | GHX/BNB on PancakeSwap |
-| Program dashboard | [staking.gamercoin.com](https://staking.gamercoin.com/) |
+| Chain | DEX | Pair | Available since |
+| --- | --- | --- | --- |
+| Ethereum | [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | GHX/WETH | Original launch |
+| BNB Chain | [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | GHX/WBNB | Original launch |
+| Solana | [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | GHX/SOL | 2025 Q2 |
 
 <Note>
-GHX in ERC-20 form must be bridged to BEP-20 before adding liquidity. Use [cBridge](https://cbridge.celer.network/) or another supported bridge.
+Make sure your GHX is on the right chain before adding liquidity. If it's on the wrong network, bridge it first — see [Contracts & Bridging](/tokenomics/contracts#bridging).
 </Note>
 
 ## How returns work
 
-You earn from two sources:
+You earn from two stacked sources whenever your LP position is in the pool:
 
-1. A share of swap fees paid by traders using the GHX/BNB pool (proportional to your LP share).
-2. Additional GHX rewards from the GamerHash liquidity-mining program.
+1. **Swap fees** — a share of every trade against your pool, proportional to your LP-token share.
+2. **GamerHash LP rewards** — bonus GHX paid out by the GamerHash program for staked LP tokens.
 
-Liquidity-mining APRs are typically higher than staking APRs.
+Liquidity-mining APRs are typically higher than plain staking, because they compensate for the risk and complexity of providing liquidity.
 
 <Warning>
-Providing liquidity exposes you to **impermanent loss** when the relative prices of GHX and BNB diverge from your deposit ratio. Read [Binance Academy on impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) before participating.
+Providing liquidity exposes you to **impermanent loss** when the relative prices of GHX and the paired asset diverge from your deposit ratio. The bigger the divergence, the larger the loss compared to simply holding both tokens. Read [Binance Academy on impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) before committing capital.
 </Warning>
+
+## Liquidity mining vs staking
+
+| | Staking | Liquidity mining |
+| --- | --- | --- |
+| Capital required | GHX only | GHX **+** paired asset (ETH / BNB / SOL) |
+| Yield sources | APR rewards | Swap fees **+** bonus GHX |
+| Typical APR | Up to 25% | Usually higher than staking |
+| Main risk | Lock-period illiquidity | **Impermanent loss** + smart-contract risk |
+| Best for | Holders who want simple, predictable yield | Active users comfortable with DeFi mechanics |
 
 ## Reference
 
-- [It's liquidity time! Stake GHX/BNB LP tokens and earn](https://medium.com/we-are-the-gamerhash/its-liquidity-time-stake-ghx-bnb-lp-tokens-and-earn-e8eef2c94c3f) — step-by-step Medium guide.
+- [It's liquidity time! Stake GHX/BNB LP tokens and earn](https://medium.com/we-are-the-gamerhash/its-liquidity-time-stake-ghx-bnb-lp-tokens-and-earn-e8eef2c94c3f) — step-by-step Medium guide for the BNB Chain pool.

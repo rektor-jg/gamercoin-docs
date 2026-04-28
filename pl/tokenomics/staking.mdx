@@ -1,43 +1,53 @@
 ---
 title: "Staking"
-description: "Lock GHX on Ethereum or BSC for fixed-term APR."
+description: "Zablokuj GHX na Ethereum, BNB Chain lub Solanie dla APR do 25%."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+Staking pozwala zablokować GHX na określony czas i zarabiać APR. To najprostszy sposób, żeby istniejąca pozycja pracowała — bez setupu LP, bez impermanent loss, bez aktywnego zarządzania. Wpłacasz, trzymasz, claimujesz.
 
-Staking is available on **Ethereum** and **BNB Chain**. Lock periods range from no-lock (flexible) to 12 months. Stake at [staking.gamercoin.com](https://staking.gamercoin.com/).
+Dashboard znajdziesz na [staking.gamercoin.com](https://staking.gamercoin.com/).
 
-## APRs
+## Gdzie możesz stakować
 
-### Ethereum
-
-| Lock period | APR | Early unstake |
+| Sieć | Dostępne od | Dlaczego ta sieć |
 | --- | --- | --- |
-| Flexible (no lock) | 10% | Allowed |
-| 3 months | 10% | Not allowed |
-| 6 months | 18% | Not allowed |
-| 12 months | 25% | Not allowed |
+| Ethereum | Pierwotny launch | Największa płynność GHX; łatwa integracja z DeFi tooling |
+| BNB Chain | Pierwotny launch | Najniższe opłaty na EVM; najłatwiejsze wejście dla początkujących |
+| Solana | 2025 Q2 | Szybka finalizacja, najniższe koszty; te same tiery APR |
 
-### BNB Chain
+## Tiery APR
 
-| Lock period | APR | Early unstake |
-| --- | --- | --- |
-| Flexible (no lock) | 6% | Allowed |
-| 3 months | 10% | Not allowed |
-| 6 months | 18% | Not allowed |
-| 12 months | 25% | Not allowed |
+Headline rate to **25% APR** przy locku na 12 miesięcy. Krótsze locki zarabiają proporcjonalnie mniej; flexible (bez locka) ma najniższe APR, bo płynność zostaje przy tobie.
+
+| Okres blokady | Ethereum | BNB Chain | Solana | Wcześniejszy unstake |
+| --- | --- | --- | --- | --- |
+| Flexible (bez locka) | 10% | 6% | 6% | Dozwolony |
+| 3 miesiące | 10% | 10% | 10% | Niedozwolony |
+| 6 miesięcy | 18% | 18% | 18% | Niedozwolony |
+| 12 miesięcy | 25% | 25% | 25% | Niedozwolony |
 
 <Warning>
-Locked stakes cannot be withdrawn before the lock expires. Choose a lock period only if you are comfortable with that liquidity constraint.
+Zablokowanych stakeów nie da się wycofać przed wygaśnięciem locka. Wybieraj okres blokady tylko jeśli akceptujesz to ograniczenie płynności na cały czas trwania.
 </Warning>
 
 <Note>
-The advertised maximum APR (25%) assumes the relevant pool is fully subscribed. Effective APR depends on pool capacity and total staked amount at the time of entry.
+Reklamowane maksymalne APR (25%) zakłada że odpowiedni pool jest w pełni zasubskrybowany. Faktyczne APR zależy od pojemności poolu i łącznej kwoty zstakowanej w momencie wejścia. Zawsze sprawdź aktualne stawki na dashboardzie przed wpłatą.
 </Note>
 
-## Reference
+## Jak wybrać okres blokady
 
-- [Staking dashboard](https://staking.gamercoin.com/)
-- [GamerHash launches GHX staking with up to 25% APR](https://medium.com/we-are-the-gamerhash/gamerhash-launches-ghx-staking-with-up-to-25-apr-for-everyone-4e32c4350127) — Medium walkthrough.
+| Jeśli... | Wybierz |
+| --- | --- |
+| Potrzebujesz pozycji płynnej dla tradingu albo innych użytków | **Flexible** — odpuść część zysku za opcję wyjścia |
+| Chcesz przewidywalny yield przez kwartał | **3 miesiące** — umiarkowane commitment, umiarkowana premia |
+| Masz pewność co do 6-miesięcznego horyzontu | **6 miesięcy** — yield skacze do 18% |
+| Możesz zablokować na rok dla najwyższej stawki | **12 miesięcy** — pełne 25% headline APR |
+
+## Krok po kroku
+
+Dla pierwszorazowego walkthrough — connect walleta, approve, claim — zobacz tutorial [How to Stake GHX](/tutorials/how-to-stake-ghx) (EN).
+
+## Materiały
+
+- [Dashboard stakingu](https://staking.gamercoin.com/) — kanoniczny entry point.
+- [GamerHash launches GHX staking with up to 25% APR](https://medium.com/we-are-the-gamerhash/gamerhash-launches-ghx-staking-with-up-to-25-apr-for-everyone-4e32c4350127) — Medium walkthrough z pierwotnego launcha.

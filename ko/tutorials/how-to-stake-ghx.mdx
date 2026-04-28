@@ -1,0 +1,133 @@
+---
+title: "GHX 스테이킹 방법"
+description: "단계별 가이드: Ethereum, BNB Chain, 또는 Solana에서 GHX를 스테이킹하여 최대 25% APR을 받으세요."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+이 가이드는 GHX 스테이킹을 처음부터 수익 받기까지 안내합니다. 예상 시간: **5~10분** + 온체인 확인 시간.
+
+## 필요한 것
+
+<CardGroup cols={2}>
+  <Card title="Web3 지갑" icon="wallet">
+    Ethereum 또는 BNB Chain의 경우: MetaMask, Rabby, 또는 Trust Wallet. Solana의 경우: Phantom, Solflare, 또는 Backpack.
+  </Card>
+  <Card title="GHX 토큰" icon="coins">
+    스테이킹하려는 체인에서. [GHX 획득 방법](/ko/tokenomics/how-to-get) 참조.
+  </Card>
+  <Card title="소량의 네이티브 가스" icon="fire">
+    Ethereum의 ETH, BNB Chain의 BNB, 또는 Solana의 SOL — 거래 수수료 지불용.
+  </Card>
+  <Card title="목표 락업 기간" icon="clock">
+    플렉서블, 3, 6, 또는 12개월. 더 긴 락업 = 더 높은 APR. [스테이킹](/ko/tokenomics/staking) 참조.
+  </Card>
+</CardGroup>
+
+## 진행 방법
+
+<Steps>
+  <Step title="스테이킹 대시보드 열기">
+    [staking.gamercoin.com](https://staking.gamercoin.com/)으로 이동합니다.
+  </Step>
+
+  <Step title="지갑 연결">
+    오른쪽 상단의 **Connect Wallet**을 클릭합니다. 지갑 제공자를 선택하고 연결 요청을 승인합니다.
+
+    <Tip>
+    지갑이 잘못된 네트워크에 있으면 대시보드가 전환을 요청합니다. 요청 시 네트워크 전환을 승인하세요.
+    </Tip>
+  </Step>
+
+  <Step title="체인 선택">
+    대시보드 상단에서 **Ethereum**, **BNB Chain**, 또는 **Solana**를 선택합니다. 각 체인에는 고유의 풀이 있고 스테이크는 체인 간 이동하지 않으므로 — GHX가 이미 있는 체인을 선택하세요.
+  </Step>
+
+  <Step title="풀 선택">
+    풀은 락업 기간과 APR에 따라 다릅니다:
+
+    | 락업 | Ethereum | BNB Chain | Solana |
+    | --- | --- | --- | --- |
+    | 플렉서블 | 10% | 6% | 6% |
+    | 3개월 | 10% | 10% | 10% |
+    | 6개월 | 18% | 18% | 18% |
+    | 12개월 | 25% | 25% | 25% |
+
+    <Warning>
+    락업된 풀은 만료 전에 인출할 수 없습니다. 유동성이 필요할 수 있다면 **플렉서블**을 선택하세요.
+    </Warning>
+  </Step>
+
+  <Step title="GHX 컨트랙트 승인 (Ethereum / BNB Chain만)">
+    EVM 체인에서 첫 스테이커는 GHX 사용을 위해 스테이킹 컨트랙트를 승인해야 합니다. **Approve**를 클릭하고 지갑에서 확인하세요.
+
+    <Note>
+    승인은 체인당 한 번의 작업입니다. 같은 체인에서 다시 승인할 필요가 없습니다. Solana는 다른 모델을 사용합니다 — 별도의 승인 단계가 없습니다.
+    </Note>
+  </Step>
+
+  <Step title="금액 입력 및 스테이크">
+    스테이킹할 GHX 양을 입력하거나 **Max**를 클릭한 다음 **Stake**를 클릭합니다. 지갑에서 거래를 확인하세요.
+  </Step>
+
+  <Step title="포지션 확인">
+    거래가 확인되면(보통 1분 이내), 스테이크가 **My Stakes**에 나타납니다. 보상은 지속적으로 누적됩니다.
+  </Step>
+</Steps>
+
+## 보상 청구
+
+보상은 지속적으로 누적됩니다. 청구하려면:
+
+1. 올바른 체인에 연결된 상태에서 스테이킹 대시보드를 엽니다.
+2. **My Stakes**에서 활성 스테이크를 찾습니다.
+3. **Claim**을 클릭합니다. 거래를 확인합니다.
+
+청구된 보상은 스테이킹한 동일한 지갑으로 들어옵니다. 최소 청구 금액은 없지만 — 각 청구는 가스 수수료가 있는 온체인 거래이므로 작은 금액의 청구는 비경제적입니다(특히 Ethereum에서).
+
+## 언스테이킹
+
+| 풀 유형 | 언스테이크 동작 |
+| --- | --- |
+| 플렉서블 | 언제든지 인출. 페널티 없음. |
+| 락업 (3 / 6 / 12개월) | 락업 만료 전 인출 불가. 만료 후 언제든지 인출. |
+
+<Steps>
+  <Step title="락업 만료 대기 (락업 풀만)">
+    대시보드는 각 락업 스테이크에 대한 카운트다운을 보여줍니다.
+  </Step>
+  <Step title="Unstake 클릭">
+    **My Stakes**에서 포지션을 찾아 **Unstake**를 클릭합니다. 지갑에서 거래를 승인합니다.
+  </Step>
+  <Step title="영수증 확인">
+    GHX(미청구 보상 포함)가 온체인 확인 시 지갑으로 돌아옵니다.
+  </Step>
+</Steps>
+
+## 문제 해결
+
+<AccordionGroup>
+  <Accordion title="GHX가 잘못된 체인에 있음">
+    스테이킹하기 전에 브릿지하세요. Ethereum ↔ BNB Chain은 [cBridge](https://cbridge.celer.network/)를 거치고; Solana 경로는 Raydium / Jupiter를 통해 통합됩니다. 활성 경로는 [컨트랙트 & 브릿징](/ko/tokenomics/contracts#브릿징)을 참조하세요.
+  </Accordion>
+  <Accordion title="거래가 대기 중에 멈춤">
+    Ethereum 또는 BNB Chain에서 지갑의 가스 가격을 올리거나 취소하고 더 높은 우선순위 수수료로 다시 시도하세요. Solana에서는 지갑이 보통 자동으로 재시도합니다 — 그렇지 않다면 새로고침하고 다시 시도하세요.
+  </Accordion>
+  <Accordion title="잔액이 보이지만 대시보드는 0을 표시">
+    스테이킹한 동일한 지갑 주소에 연결되어 있는지, 대시보드가 실제로 스테이킹한 체인으로 설정되어 있는지 확인하세요. 페이지를 새로고침하세요.
+  </Accordion>
+  <Accordion title="표시된 APR이 광고된 것보다 낮음">
+    APR은 풀 용량에 따라 다릅니다. 25% 헤드라인은 풀이 완전히 가입되었을 때 적용됩니다. 풀이 과다 할당된 경우 실효 APR이 낮을 수 있습니다. [스테이킹](/ko/tokenomics/staking) 참조.
+  </Accordion>
+</AccordionGroup>
+
+## 다음 단계
+
+<CardGroup cols={2}>
+  <Card title="유동성 마이닝" icon="droplet" href="/ko/tokenomics/liquidity-mining">
+    Uniswap, PancakeSwap, 또는 Raydium에서 LP를 제공하여 추가 수익을 누적하세요.
+  </Card>
+  <Card title="포지션 추적" icon="chart-line" href="/ko/resources/track-ghx">
+    실시간 차트와 어그리게이터 데이터.
+  </Card>
+</CardGroup>

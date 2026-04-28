@@ -1,16 +1,39 @@
 ---
 title: "Token Burn"
-description: "Permanently removed supply: 72,000,000 GHX across 7 rounds."
+description: "72,000,000 GHX permanently removed across seven burn rounds, plus the ongoing buyback-and-burn loop."
 ---
 
-A total of **72,000,000 GHX** — **8.1% of the initial supply** — has been permanently removed from circulation across seven burn rounds between **December 2021 and June 2022**.
+| | |
+| --- | --- |
+| **Total burned** | 72,000,000 GHX |
+| **Share of initial supply** | 8.1% |
+| **Rounds** | 7 |
+| **Period** | December 2021 — June 2022 |
+| **Verifiable at** | [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning) |
 
-## Method
+## Why we burned
 
-Tokens were sent to an unrecoverable burn address (eater address). Once received, they cannot be transferred or withdrawn.
+Supply burning serves two purposes. It tightens the circulating supply — every burned token is gone for good, so any future demand pulls against a smaller float. And it signals long-term alignment: the team chose to permanently retire a meaningful share of supply rather than hold or sell it.
 
-All burn transactions are publicly verifiable on-chain at [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning).
+The seven rounds executed between December 2021 and June 2022 removed **8.1% of the initial supply** in a single program.
+
+## How it works
+
+GHX burns use the **eater address** technique: tokens are sent to an on-chain address with no known private key. Anyone can send tokens *to* the address; nobody can send them *from* it. Once received, the supply is mathematically out of reach forever.
+
+Every transaction is verifiable on-chain. Burn details and transaction hashes are aggregated at [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning).
+
+## Ongoing buyback-and-burn
+
+Beyond the historical 72M-GHX program, GHX has an ongoing buyback-and-burn loop tied to platform revenue:
+
+1. Partners and developers pay the network for AI compute.
+2. A portion of that revenue is used to buy GHX from the open market.
+3. Some of those bought-back tokens are routed to user rewards; some are burned.
+
+The mechanism creates structural demand for GHX as the network scales — more usage means more buyback pressure, which net-of-rewards still reduces effective circulating supply.
 
 ## Reference
 
-- [Limiting GHX supply — first-ever Token Burn](https://medium.com/we-are-the-gamerhash/limiting-ghx-supply-first-ever-token-burn-d1c0d2ea86f) — Medium article covering the rationale and process.
+- [Limiting GHX supply — first-ever Token Burn](https://medium.com/we-are-the-gamerhash/limiting-ghx-supply-first-ever-token-burn-d1c0d2ea86f) — Medium article covering rationale and execution of the original 7-round program.
+- [Why $GHX isn't just another token](https://medium.com/we-are-the-gamerhash/why-ghx-isnt-just-another-token-1ce77aa720e4) — Recent piece (Feb 2026) on the infrastructure-backed economics, including buyback dynamics.

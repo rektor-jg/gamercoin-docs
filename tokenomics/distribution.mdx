@@ -1,84 +1,50 @@
 ---
 title: "Distribution"
-description: "TGE allocation, vesting schedule, and post-burn supply."
+description: "TGE allocation, vesting schedule, and the supply after seven burn rounds."
 ---
 
-The Token Generation Event (TGE) took place on **31 December 2020**. Between December 2021 and June 2022, seven rounds of token burns reduced the supply by **8.1%** (72,000,000 GHX). See [Token Burn](/tokenomics/burn) for details.
+GHX launched at its Token Generation Event on **31 December 2020**. The page below is the historical record of how the initial supply was allocated and how each bucket vested into circulation.
+
+Between December 2021 and June 2022, seven rounds of buybacks-and-burns permanently removed **72,000,000 GHX — 8.1% of the initial supply** — from circulation. See [Token Burn](/tokenomics/burn) for the full mechanics and on-chain proof.
+
+<Note>
+As of 2026, every vesting bucket has fully unlocked. The figures below describe the original allocation and historical vesting schedule — for current circulating supply and live price data, see [Track GHX](/resources/track-ghx).
+</Note>
 
 ## TGE allocation
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'pie1':'#E83C41','pie2':'#F59E0B','pie3':'#2AD46F','pie4':'#3B82F6','pie5':'#A855F7','pie6':'#EC4899','pie7':'#14B8A6','pie8':'#F97316','pie9':'#84CC16'}}}%%
-pie showData
-    "Token Contributors" : 36.6
-    "Team" : 15
-    "Foundation" : 14
-    "Ecosystem Fund" : 12
-    "Strategic Partnership" : 5
-    "Community & Game Mining" : 5
-    "Liquidity Reserve" : 4.4
-    "Advisors" : 4
-    "Marketing" : 4
-```
+<Frame>
+  <img src="/images/distribution-pie.png" alt="GHX TGE allocation: Token Contributors 36.6%, Team 15%, Foundation 14%, Ecosystem Fund 12%, plus six smaller buckets — initial supply 100% as of 31 Dec 2020" />
+</Frame>
 
 | Bucket | Share | Purpose |
 | --- | --- | --- |
-| Token Contributors | 36.6% | Private and seed sale buyers (with bonus tokens vested) |
-| Team | 15.0% | Core team incentive pool |
+| Token Contributors | 36.6% | Private and seed sale buyers, including bonus tokens earmarked for early supporters |
+| Team | 15.0% | Long-term incentive pool for core contributors |
 | Foundation | 14.0% | Industry support: developers, organizations, events |
-| Ecosystem Fund | 12.0% | Partner integrations and Play&Earn rewards |
-| Strategic Partnership | 5.0% | Long-term integrators (not for secondary markets) |
+| Ecosystem Fund | 12.0% | Partner integrations, marketplace toolsets, ecosystem incentives |
+| Strategic Partnership | 5.0% | Onboarding allocation for long-term integrators (not destined for secondary markets) |
 | Community & Game Mining | 5.0% | Community rewards and mining bonuses |
-| Liquidity Reserve | 4.4% | DEX/CEX market-making liquidity |
+| Liquidity Reserve | 4.4% | Market-making liquidity across CEX and DEX venues |
 | Advisors | 4.0% | Strategic advisor allocation |
 | Marketing | 4.0% | User acquisition, brand, conferences |
 
 ## Vesting schedule
 
-```mermaid
-gantt
-    title GHX vesting timeline (months from TGE)
-    dateFormat X
-    axisFormat %s
-    section Seed & Private
-    Vesting :0, 9
-    section Liquidity Reserve
-    Instant :0, 1
-    section Community & Game Mining
-    Cliff :crit, 0, 1
-    Vesting :1, 33
-    section Advisors
-    Cliff :crit, 0, 3
-    Vesting :3, 12
-    section Marketing
-    Cliff :crit, 0, 3
-    Vesting :3, 12
-    section Ecosystem Fund
-    Cliff :crit, 0, 1
-    Vesting :1, 60
-    section Team
-    Cliff :crit, 0, 12
-    Vesting :12, 30
-    section Foundation
-    Cliff :crit, 0, 12
-    Vesting :12, 48
-    section Strategic Partnership
-    Cliff :crit, 0, 24
-    Vesting :24, 36
-```
+Vesting was designed to align long-term contributors and prevent supply shocks. The chart below shows each bucket on its own row: red is the cliff (locked), green is linear vesting, and the gold dot marks an instant unlock at TGE.
+
+<Frame>
+  <img src="/images/vesting-timeline.png" alt="GHX vesting timeline showing cliff and linear vesting periods for each bucket over 5 years" />
+</Frame>
 
 | Bucket | Cliff | Schedule | Total duration |
 | --- | --- | --- | --- |
 | Seed & Private sale | None | 12.5% at TGE+7d, 12.5% at TGE+14d, 25% every 3 months | 9 months |
-| Team | 12 months | 10% at start, 5% monthly for 18 months | 30 months |
-| Foundation | 12 months | 25% at start, 25% every 12 months for 3 years | 4 years |
-| Ecosystem Fund | 30 days | 10% at start, 18% every 12 months for 5 years | 5 years |
+| Team | 12 months | 10% at unlock, then 5% monthly for 18 months | 30 months |
+| Foundation | 12 months | 25% at unlock, 25% every 12 months for 3 years | 4 years |
+| Ecosystem Fund | 30 days | 10% at unlock, 18% every 12 months for 5 years | 5 years |
 | Strategic Partnership | 24 months | 50% at year 2, 50% at year 3 | 3 years |
-| Community & Game Mining | 30 days | 4% at start, 3% monthly for 32 months | 33 months |
-| Advisors | 90 days | 25% at start, 25% every 3 months | 12 months |
-| Marketing | 90 days | 25% at start, 25% every 3 months | 12 months |
-| Liquidity Reserve | None | Instant | — |
-
-<Note>
-Distribution figures reflect the original TGE allocation. Current circulating supply differs due to vesting unlocks and the seven burn rounds.
-</Note>
+| Community & Game Mining | 30 days | 4% at unlock, then 3% monthly for 32 months | 33 months |
+| Advisors | 90 days | 25% at unlock, 25% every 3 months | 12 months |
+| Marketing | 90 days | 25% at unlock, 25% every 3 months | 12 months |
+| Liquidity Reserve | None | Instant at TGE | — |

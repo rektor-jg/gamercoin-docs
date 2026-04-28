@@ -1,0 +1,53 @@
+---
+title: "개요"
+description: "GHX 공급량, 네트워크, 유틸리티, 그리고 이를 연결하는 메커니즘."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+GHX는 GamerHash 생태계의 정산 계층입니다. 동일한 토큰이 AI 컴퓨팅 비용을 지불하고, 스테이킹과 유동성 프로그램을 통해 수익을 창출하며, GamerHash AI 앱 내에서 더 높은 단계를 잠금 해제하고, 세 개의 체인을 자유롭게 이동합니다.
+
+## 토큰 흐름
+
+<Frame>
+  <img src="/images/token-flow.png" alt="GHX 토큰 흐름: GPU 공유와 거래소 구매가 사용자 지갑으로 들어오고, 지갑에서 AI 앱 단계 상승, ETH/BSC/SOL 스테이킹, Uniswap/PancakeSwap/Raydium LP 보상, GamerHash 스토어 사용, 또는 체인 간 브릿지로 GHX가 라우팅됩니다" />
+</Frame>
+
+GHX는 두 가지 경로로 유입됩니다 — AI 앱에서 GPU 자원을 공유하여 획득하거나, 거래소에서 구매하는 경우입니다. 그리고 다섯 가지 경로로 사용됩니다: 가치를 누적하는 경로(스테이킹, LP, 앱 내 단계)와 정산하는 경로(스토어 사용, 크로스체인 브릿지)입니다.
+
+## 네트워크
+
+GHX는 Ethereum에 네이티브로 배포되었으며 BNB Chain과 Solana에 브릿지되어 있습니다. 세 배포 모두 cBridge와 DEX 측 유동성을 통해 상호 운용 가능합니다.
+
+| 체인 | 표준 | 컨트랙트 주소 |
+| --- | --- | --- |
+| <Eth /> | ERC-20 | `0x728f30fa2f100742c7949d1961804fa8e0b1387d` |
+| <Bsc /> | BEP-20 | `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` |
+| <Sol /> | SPL | `Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7` |
+
+## 유틸리티
+
+| 기능 | 설명 |
+| --- | --- |
+| 결제 | [GamerHash 스토어](https://gamerhash.com/en/shop)에서 GHX 사용, 또는 GamerHash AI 앱에서 AI Image Booster 프롬프트 잠금 해제. |
+| GPU 컴퓨팅 보상 | GamerHash AI 앱을 통해 GPU 자원을 공유하여 획득. GUSD(앱 내 USD 단위)로 지급되며 클릭 한 번으로 GHX로 변환 가능. |
+| 스테이킹 | Ethereum, BNB Chain, Solana에 GHX를 락업하여 고정 기간 APR — 가장 긴 락업에서 최대 **25%**. |
+| 유동성 마이닝 | Uniswap(Ethereum), PancakeSwap(BNB Chain), Raydium(Solana)에서 LP를 제공하고 스왑 수수료와 추가 GHX 보상 획득. |
+| 홀더 단계 | GamerHash AI 앱에서 GHX를 보유하고 사용하면 앱 내 단계가 상승하고, 이는 GHXP 배수를 높여 — 더 높은 배수는 사용자에게 더 많은 GHX 보상으로 이어집니다. |
+
+## 다음 단계
+
+<CardGroup cols={2}>
+  <Card title="토큰 설명" icon="circle-info" href="/ko/tokenomics/token-description">
+    각 유틸리티에 대한 자세한 설명과 그 근거.
+  </Card>
+  <Card title="GHX 획득 방법" icon="arrow-right-arrow-left" href="/ko/tokenomics/how-to-get">
+    CEX에서 구매, DEX에서 스왑, 또는 플랫폼 내 획득.
+  </Card>
+  <Card title="분배" icon="chart-pie" href="/ko/tokenomics/distribution">
+    TGE 할당, 베스팅 일정, 소각 후 공급량.
+  </Card>
+  <Card title="스테이킹" icon="lock" href="/ko/tokenomics/staking">
+    지원되는 모든 네트워크의 APR과 락업 기간.
+  </Card>
+</CardGroup>

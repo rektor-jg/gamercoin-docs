@@ -1,0 +1,86 @@
+---
+title: "용어집"
+description: "이 문서 전반에서 사용되는 크립토, GamerHash 관련, 인프라 용어."
+---
+
+## 토큰 및 단위
+
+**GHX (GamerCoin)** — GamerHash 생태계의 네이티브 유틸리티 토큰. Ethereum에서 발행되어 BNB Chain과 Solana에 브릿지됨.
+
+**GUSD** — 앱 내 USD 표시 단위. GamerHash AI 앱의 GPU 공유 수익은 GUSD로 지급되며; 사용자는 원하는 시점에 클릭 한 번으로 GHX로 변환할 수 있음.
+
+**GHXP (GamerHash Experience Points)** — GamerHash AI 앱을 실행하거나 앱 내 작업을 완료하여 획득하는 오프체인 참여 점수. 더 높은 GHXP 잔액은 GPU 공유에 대한 GHX 보상을 배수로 늘림 — GHXP는 보상 배수이며 변환 가능한 화폐가 아님. [토크노믹스 개요](/ko/tokenomics/overview#유틸리티) 참조.
+
+**홀더 단계** — GHX 보유 및 사용으로 결정되는 앱 내 상태 단계. 더 높은 단계는 GHXP 배수를 높이고, 이는 작업당 더 많은 GHX 지급으로 이어짐.
+
+## 토큰 경제
+
+**TGE (Token Generation Event)** — 토큰이 처음 온체인에서 생성되어 사용 가능해지는 시점. GHX TGE: 2020년 12월 31일.
+
+**베스팅** — 장기적 인센티브 정렬을 위해 일반적으로 수개월 또는 수년에 걸친 토큰의 시간 잠금 해제.
+
+**토큰 소각** — 보통 회수 불가능한 주소(eater address)로 보내 유통 공급량에서 토큰을 영구 제거하는 것. [토큰 소각](/ko/tokenomics/burn) 참조.
+
+**Eater address** — 검증 가능한 소각에 사용되는, 토큰을 보낼 수도 인출할 수도 없는 지갑 주소.
+
+**바이백-앤-번** — 플랫폼 수익이 시장에서 토큰을 매입하는 데 사용되는 메커니즘; 일부는 소각되고 일부는 사용자 보상으로 라우팅됨. [토큰 소각](/ko/tokenomics/burn#지속적인-바이백-앤-번) 참조.
+
+**유통 공급량** — 현재 공개 시장에서 사용 가능한 토큰(잠금, 소각, 미베스팅된 할당 제외).
+
+## 수익 메커니즘
+
+**스테이킹** — 정해진 기간 동안 토큰을 잠가 수익을 얻는 것. [스테이킹](/ko/tokenomics/staking) 참조.
+
+**APR (Annual Percentage Rate)** — 연간 수익률, 복리 미적용. 스테이킹 보상에 사용.
+
+**APY (Annual Percentage Yield)** — 연간 수익률, 복리 적용. 동일 명목 비율에서 일반적으로 APR보다 높음.
+
+**유동성 마이닝** — DEX 풀에 유동성을 제공해 토큰 보상을 얻는 것. [유동성 마이닝](/ko/tokenomics/liquidity-mining) 참조.
+
+**유동성 풀 (LP)** — DEX에서 트레이더가 스왑하는 두 페어 토큰의 풀(예: GHX/BNB).
+
+**LP 토큰** — 유동성 풀에 입금할 때 발행되는 영수증 토큰. 풀의 점유율을 나타냄.
+
+**임퍼머넌트 로스** — 입금 후 풀의 두 자산 가격이 달라질 때 단순 보유에 비해 손실되는 가치.
+
+## 네트워크 및 인프라
+
+**ERC-20** — Ethereum의 표준 토큰 인터페이스. GHX의 Ethereum 배포.
+
+**BEP-20** — BNB Chain의 토큰 표준, 다른 체인에서의 ERC-20 등가.
+
+**SPL** — Solana Program Library 토큰 표준. Solana의 ERC-20 등가.
+
+**Bridge** — 토큰을 블록체인 간 이동하는 메커니즘. GHX는 Ethereum ↔ BNB Chain에 [cBridge](https://cbridge.celer.network/)를, Solana 관련 경로에 Raydium / Jupiter 통합을 사용. [컨트랙트 & 브릿징](/ko/tokenomics/contracts#브릿징) 참조.
+
+**deAPI** — GamerHash GPU 네트워크를 개발자에게 노출하는 OpenAI 호환 공개 API. [deapi.ai](https://deapi.ai)에서 이용 가능.
+
+**n8n** — 오픈소스 워크플로우 자동화 플랫폼. deAPI는 공식 n8n 노드로 제공되어, GamerHash 네트워크에서 AI 워크로드의 노코드 오케스트레이션을 가능하게 함.
+
+**DePIN (Decentralized Physical Infrastructure Network)** — 참여자가 크립토 보상을 통해 실제 인프라(컴퓨팅, 스토리지, 대역폭 등)를 제공하도록 인센티브를 주는 프로토콜의 카테고리. GamerHash GPU 네트워크는 DePIN; GHX는 CoinGecko에서 DePIN으로 태그됨.
+
+## 트레이딩
+
+**CEX (Centralized Exchange)** — 전통적인 수탁형 트레이딩 플랫폼(예: KuCoin, Bithumb, MEXC, Gate.io).
+
+**DEX (Decentralized Exchange)** — 비수탁형 온체인 트레이딩 장소(예: Uniswap, PancakeSwap, Raydium).
+
+**AMM (Automated Market Maker)** — 대부분의 DEX가 사용하는 알고리즘 가격 모델; 거래는 호가창이 아닌 유동성 풀을 상대로 실행됨.
+
+**슬리피지** — 풀 깊이 대비 거래 규모로 인해 발생하는 예상 가격과 실행 가격의 차이.
+
+## 상장 카테고리
+
+**GameFi** — 게이밍과 금융을 결합한 크립토 카테고리(토큰 기반 게임, 인게임 경제).
+
+**AI Applications** — AI 관련 인프라 또는 서비스를 구동하는 토큰의 태그.
+
+## 컴플라이언스
+
+**AML (Anti–Money Laundering)** — 의심스러운 금융 활동의 모니터링 및 보고를 요구하는 규제 프레임워크.
+
+**CFT (Counter-Financing of Terrorism)** — 테러자금 조달을 위한 금융 시스템 사용을 표적으로 하는 규제.
+
+**PMLFTR** — 몰타의 자금세탁 및 테러자금 조달 방지 규정. [AML / CFT](/ko/legal/aml-cft)에서 언급됨.
+
+**MFSA (Malta Financial Services Authority)** — GHX 화이트페이퍼가 등록된 몰타 규제 기관.

@@ -1,20 +1,39 @@
 ---
 title: "Token Burn"
-description: "Permanently removed supply: 72,000,000 GHX across 7 rounds."
+description: "72 000 000 GHX trwale wycofane w siedmiu rundach, plus stała pętla buyback-and-burn."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+| | |
+| --- | --- |
+| **Łącznie spalone** | 72 000 000 GHX |
+| **Udział w początkowej podaży** | 8,1% |
+| **Rundy** | 7 |
+| **Okres** | Grudzień 2021 — czerwiec 2022 |
+| **Weryfikacja** | [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning) |
 
-A total of **72,000,000 GHX** — **8.1% of the initial supply** — has been permanently removed from circulation across seven burn rounds between **December 2021 and June 2022**.
+## Po co burn
 
-## Method
+Spalanie podaży ma dwa cele. Zmniejsza podaż w obiegu — każdy spalony token znika na zawsze, więc każdy przyszły popyt napotyka mniejszy float. I sygnalizuje długoterminowe wyrównanie: zespół zdecydował trwale wycofać znaczącą część podaży zamiast ją trzymać albo sprzedać.
 
-Tokens were sent to an unrecoverable burn address (eater address). Once received, they cannot be transferred or withdrawn.
+Siedem rund wykonanych między grudniem 2021 a czerwcem 2022 usunęło z obiegu **8,1% początkowej podaży** w ramach jednego programu.
 
-All burn transactions are publicly verifiable on-chain at [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning).
+## Jak to działa
 
-## Reference
+Burny GHX używają techniki **eater address**: tokeny są wysyłane na on-chainowy adres, do którego nikt nie zna klucza prywatnego. Każdy może wysłać tokeny *na* ten adres; nikt nie może ich z niego wysłać. Po wysłaniu podaż jest matematycznie niedostępna na zawsze.
 
-- [Limiting GHX supply — first-ever Token Burn](https://medium.com/we-are-the-gamerhash/limiting-ghx-supply-first-ever-token-burn-d1c0d2ea86f) — Medium article covering the rationale and process.
+Każda transakcja jest weryfikowalna on-chain. Szczegóły burnów i hashe transakcji są zagregowane na [gamercoin.com/en/ghx-burning](https://gamercoin.com/en/ghx-burning).
+
+## Ciągły buyback-and-burn
+
+Poza historycznym programem 72M GHX, GHX ma stałą pętlę buyback-and-burn powiązaną z przychodami platformy:
+
+1. Partnerzy i deweloperzy płacą sieci za compute AI.
+2. Część tych przychodów jest używana do skupowania GHX z otwartego rynku.
+3. Część odkupionych tokenów trafia do nagród użytkowników; część jest palona.
+
+Mechanizm tworzy strukturalny popyt na GHX wraz ze skalowaniem sieci — większe użycie oznacza większy buyback, co netto-po-nagrodach nadal redukuje efektywną podaż w obiegu.
+
+## Materiały
+
+- [Limiting GHX supply — first-ever Token Burn](https://medium.com/we-are-the-gamerhash/limiting-ghx-supply-first-ever-token-burn-d1c0d2ea86f) — artykuł na Medium o motywacji i przebiegu pierwotnego 7-rundowego programu.
+- [Why $GHX isn't just another token](https://medium.com/we-are-the-gamerhash/why-ghx-isnt-just-another-token-1ce77aa720e4) — niedawny tekst (luty 2026) o ekonomice opartej na infrastrukturze, w tym dynamice buybacku.

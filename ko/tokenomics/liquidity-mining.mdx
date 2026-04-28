@@ -1,0 +1,47 @@
+---
+title: "유동성 마이닝"
+description: "Uniswap, PancakeSwap, 또는 Raydium에서 GHX 유동성 공급 후 LP 토큰을 스테이킹하여 추가 GHX 보상 획득."
+---
+
+유동성 마이닝은 두 가지 수익 흐름을 쌓습니다: 유동성을 제공해서 이미 받게 되는 표준 LP 스왑 수수료에 더해 GamerHash 프로그램의 추가 GHX 보상이 더해집니다.
+
+프로그램 보상 추적 및 청구를 위한 대시보드는 [staking.gamercoin.com](https://staking.gamercoin.com/)에 있습니다.
+
+## 어디서 작동하나
+
+| 체인 | DEX | 페어 | 지원 시작 |
+| --- | --- | --- | --- |
+| Ethereum | [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | GHX/WETH | 최초 출시 |
+| BNB Chain | [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | GHX/WBNB | 최초 출시 |
+| Solana | [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | GHX/SOL | 2025년 Q2 |
+
+<Note>
+유동성을 추가하기 전에 GHX가 올바른 체인에 있는지 확인하세요. 잘못된 네트워크에 있다면 먼저 브릿지하세요 — [컨트랙트 & 브릿징](/ko/tokenomics/contracts#브릿징) 참조.
+</Note>
+
+## 수익이 작동하는 방식
+
+LP 포지션이 풀에 있을 때마다 두 가지 누적 소스로부터 수익을 얻습니다:
+
+1. **스왑 수수료** — 풀에 대한 모든 거래의 일부, LP 토큰 점유율에 비례.
+2. **GamerHash LP 보상** — 스테이킹된 LP 토큰에 대해 GamerHash 프로그램이 지급하는 추가 GHX.
+
+유동성 마이닝 APR은 일반적으로 일반 스테이킹보다 높습니다. 유동성을 제공하는 위험과 복잡성을 보상하기 때문입니다.
+
+<Warning>
+유동성을 제공하면 GHX와 페어 자산의 상대 가격이 입금 비율과 차이가 날 때 **임퍼머넌트 로스**에 노출됩니다. 차이가 클수록 두 토큰을 단순히 보유하는 것에 비해 손실이 커집니다. 자본을 투입하기 전에 [Binance Academy의 임퍼머넌트 로스](https://academy.binance.com/en/articles/impermanent-loss-explained)를 읽어보세요.
+</Warning>
+
+## 유동성 마이닝 vs 스테이킹
+
+| | 스테이킹 | 유동성 마이닝 |
+| --- | --- | --- |
+| 필요 자본 | GHX만 | GHX **+** 페어 자산(ETH / BNB / SOL) |
+| 수익 소스 | APR 보상 | 스왑 수수료 **+** 보너스 GHX |
+| 일반적 APR | 최대 25% | 일반적으로 스테이킹보다 높음 |
+| 주요 위험 | 락업 기간 비유동성 | **임퍼머넌트 로스** + 스마트 컨트랙트 위험 |
+| 적합한 대상 | 단순하고 예측 가능한 수익률을 원하는 보유자 | DeFi 메커니즘에 익숙한 활동적인 사용자 |
+
+## 참고
+
+- [It's liquidity time! Stake GHX/BNB LP tokens and earn](https://medium.com/we-are-the-gamerhash/its-liquidity-time-stake-ghx-bnb-lp-tokens-and-earn-e8eef2c94c3f) — BNB Chain 풀에 대한 단계별 Medium 가이드.

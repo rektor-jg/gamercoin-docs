@@ -1,67 +1,71 @@
 ---
-title: "Contracts & Audits"
-description: "Canonical GHX deployments, technical specs, and audit status."
+title: "Kontrakty i audyty"
+description: "Kanoniczne wdrożenia GHX, decimals, trasy bridge i status audytów."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+GHX działa na trzech sieciach. Natywne wdrożenie żyje na Ethereum; wersje na BNB Chain i Solanie to bridgowane kopie zabezpieczone zablokowaną podażą na sieci źródłowej. Adresy, decimals i główny DEX dla każdego wdrożenia znajdziesz poniżej — to jedyne autorytatywne źródła.
 
 <Warning>
-Always verify the contract address against this page or [gamercoin.com](https://gamercoin.com) before transacting. Tokens with similar names exist on every major chain. The only authoritative addresses are listed below.
+Tokeny-scam o podobnych nazwach istnieją na każdej głównej sieci. Zawsze zweryfikuj adres kontraktu z tą stroną lub [gamercoin.com](https://gamercoin.com) przed swapem, bridgem albo approvelem.
 </Warning>
 
-## Deployments
+## Wdrożenia
 
 <Tabs>
   <Tab title="Ethereum">
-    | Field | Value |
+    | Pole | Wartość |
     | --- | --- |
     | Standard | ERC-20 |
-    | Address | [`0x728f30fa2f100742c7949d1961804fa8e0b1387d`](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+    | Adres | [`0x728f30fa2f100742c7949d1961804fa8e0b1387d`](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
     | Decimals | 18 |
     | Explorer | [Etherscan](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
-    | Primary DEX | [Uniswap (GHX/WETH)](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+    | Główny DEX | [Uniswap (GHX/WETH)](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
   </Tab>
   <Tab title="BNB Chain">
-    | Field | Value |
+    | Pole | Wartość |
     | --- | --- |
     | Standard | BEP-20 |
-    | Address | [`0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4`](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
+    | Adres | [`0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4`](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
     | Decimals | 18 |
     | Explorer | [BscScan](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
-    | Primary DEX | [PancakeSwap (GHX/WBNB)](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) |
+    | Główny DEX | [PancakeSwap (GHX/WBNB)](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) |
   </Tab>
   <Tab title="Solana">
-    | Field | Value |
+    | Pole | Wartość |
     | --- | --- |
     | Standard | SPL |
     | Mint | [`Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7`](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
     | Decimals | 9 |
     | Explorer | [Solscan](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
-    | Primary DEX | [Raydium (GHX/SOL)](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+    | Główny DEX | [Raydium (GHX/SOL)](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
   </Tab>
 </Tabs>
 
 <Note>
-**Decimals note.** Ethereum and BNB Chain contracts use 18 decimals (standard ERC-20/BEP-20). The Solana SPL token uses 9 decimals (Solana convention). Always read decimals from the contract before formatting amounts in code.
+**O decimals.** Ethereum i BNB Chain używają 18 decimals (domyślne dla ERC-20/BEP-20). SPL na Solanie używa 9 decimals (konwencja Solany dla tokenów fungible). Przy formatowaniu kwot w kodzie zawsze odczytuj decimals bezpośrednio z kontraktu — nigdy nie zakładaj.
 </Note>
 
 ## Bridging
 
-GHX moves between chains via:
+<Frame>
+  <img src="/images/bridging.png" alt="Bridging GHX między Ethereum (ERC-20), BNB Chain (BEP-20) i Solaną (SPL) — wszystkie trzy sieci są w pełni połączone" />
+</Frame>
 
-- [cBridge](https://cbridge.celer.network/) — Ethereum ↔ BNB Chain
-- Bridge from/to Solana via integrations announced in 2025 (Raydium, Jupiter, Solscan). See the [2025 plan](/roadmap/whats-next-2025).
+Wszystkie trzy wdrożenia są ze sobą połączone. Aktywne trasy:
 
-When bridging, supply on the source chain is locked or burned and equivalent supply minted on the destination chain. Total cross-chain supply remains conserved minus burns.
+- **Ethereum ↔ BNB Chain** — przez [cBridge](https://cbridge.celer.network/) (Celer Network).
+- **Ethereum ↔ Solana** oraz **BNB Chain ↔ Solana** — również aktywne.
 
-## Audits
+Przy bridge'owaniu podaż na sieci źródłowej jest blokowana lub palona, a równoważna ilość mintowana na sieci docelowej. Łączna podaż pozostaje zachowana, pomniejszona o [historyczne burny](/pl/tokenomics/burn).
+
+## Audyty
 
 <Note>
-Public smart-contract audit reports are not currently linked from this documentation. If you require an audit attestation for due diligence, contact the GamerHash team via the [community channels](/useful-links#social).
+Publiczne raporty audytowe smart kontraktów nie są obecnie linkowane z tej dokumentacji. Whitepaper GHX jest zarejestrowany w **Malta Financial Services Authority (MFSA)**, a podmiot emitujący (COINAXE LTD) jest zarejestrowany na Malcie. Po atestację audytową na potrzeby due diligence skontaktuj się z zespołem przez [kanały społeczności](/pl/useful-links#social).
 </Note>
 
-## Reporting issues
+## Zgłaszanie problemów bezpieczeństwa
 
-If you discover a security issue with any GHX deployment, please disclose responsibly via the official channels in [Useful Links](/useful-links). Do not post unconfirmed vulnerabilities publicly.
+Jeśli odkryjesz vulnerability w którymkolwiek wdrożeniu GHX, **proszę zgłoś to prywatnie zanim opublikujesz gdziekolwiek**. Najszybsze ścieżki to direct message na oficjalnym [Discordzie](https://gamerhash.com/en/l/Myw09) lub [Telegramie](https://gamerhash.com/en/l/l9Nb9) albo email przez formularz kontaktowy na [gamerhash.com](https://gamerhash.com).
+
+Nie publikuj szczegółów exploitu ani kodu proof-of-concept w publicznych kanałach — nawet częściowe ujawnienie może narazić środki użytkowników zanim łatka zostanie wdrożona.

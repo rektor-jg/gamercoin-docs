@@ -1,0 +1,62 @@
+---
+title: "Track GHX"
+description: "GamerCoin의 실시간 가격, 차트, 그리고 모든 지원 네트워크의 온체인 데이터 소스."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+## 어그리게이터
+
+실시간 가격, 마켓캡, 공급량, 거래소 상장을 보는 가장 빠른 방법은 표준 어그리게이터 중 하나를 통하는 것입니다:
+
+<CardGroup cols={3}>
+  <Card title="CoinGecko" icon="chart-line" href="https://www.coingecko.com/en/coins/gamercoin">
+    실시간 가격, 마켓캡, 공급량, 볼륨, 역사적 차트.
+  </Card>
+  <Card title="CoinMarketCap" icon="chart-pie" href="https://coinmarketcap.com/currencies/gamercoin/">
+    시장 데이터, 순위, 거래소 상장.
+  </Card>
+  <Card title="DexScreener" icon="arrow-trend-up" href="https://dexscreener.com/search?q=GHX">
+    모든 체인에 걸친 DEX 거래 활동.
+  </Card>
+</CardGroup>
+
+## 실시간 차트
+
+DexScreener는 세 체인의 모든 GHX 풀에 대한 실시간 차트를 제공합니다. 관심 있는 풀에 해당하는 차트를 여세요:
+
+<CardGroup cols={3}>
+  <Card title="GHX/WETH" icon="ethereum" href="https://dexscreener.com/ethereum/0x728f30fa2f100742c7949d1961804fa8e0b1387d">
+    Ethereum (Uniswap)
+  </Card>
+  <Card title="GHX/WBNB" icon="coins" href="https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4">
+    BNB Chain (PancakeSwap)
+  </Card>
+  <Card title="GHX/SOL" icon="bolt" href="https://dexscreener.com/solana/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7">
+    Solana (Raydium)
+  </Card>
+</CardGroup>
+
+## 체인별 추적
+
+각 체인에는 자체 블록 익스플로러(거래 및 컨트랙트 세부 정보용)와 DexScreener 페이지(풀 깊이 및 거래 활동용)가 있습니다.
+
+| 체인 | 블록 익스플로러 | DEX 활동 |
+| --- | --- | --- |
+| <Eth /> | [Etherscan](https://etherscan.io/token/0x728f30fa2f100742c7949d1961804fa8e0b1387d) | [DexScreener Ethereum](https://dexscreener.com/ethereum/0x728f30fa2f100742c7949d1961804fa8e0b1387d) |
+| <Bsc /> | [BscScan](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) | [DexScreener BSC](https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
+| <Sol /> | [Solscan](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | [DexScreener Solana](https://dexscreener.com/solana/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
+
+## 공식 컨트랙트 주소
+
+지갑에 GHX를 수동으로 추가하거나 제3자 목록을 확인하는 데 사용하세요:
+
+| 체인 | 주소 |
+| --- | --- |
+| Ethereum (ERC-20) | `0x728f30fa2f100742c7949d1961804fa8e0b1387d` |
+| BNB Chain (BEP-20) | `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` |
+| Solana (SPL) | `Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7` |
+
+<Warning>
+가짜 GHX 목록이 모든 주요 어그리게이터에 존재합니다. 제3자 데이터에 의존하기 전에 항상 컨트랙트 주소를 이 페이지나 [컨트랙트 & 감사](/ko/tokenomics/contracts)와 대조 확인하세요.
+</Warning>

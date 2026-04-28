@@ -1,0 +1,142 @@
+---
+title: "Jak dostarczyć płynność"
+description: "Krok po kroku: dodaj płynność na Uniswap, PancakeSwap albo Raydium, potem zstakuj LP tokeny po dodatkowe nagrody w GHX."
+---
+
+Liquidity mining stackuje dwa strumienie yieldu: opłaty z transakcji LP i bonusowe GHX z programu GamerHash. Żeby odblokować oba, musisz dodać płynność na DEX-ie, otrzymać LP tokeny i zstakować je na [staking.gamercoin.com](https://staking.gamercoin.com/).
+
+Szacowany czas: **10–15 minut** plus potwierdzenia on-chain.
+
+<Warning>
+Dostarczanie płynności wystawia cię na **impermanent loss**, kiedy względne ceny GHX i drugiego aktywa rozchodzą się od siebie. Przeczytaj [Binance Academy o impermanent loss](https://academy.binance.com/en/articles/impermanent-loss-explained) zanim zaangażujesz kapitał.
+</Warning>
+
+## Co będziesz potrzebować
+
+<CardGroup cols={2}>
+  <Card title="Web3 wallet" icon="wallet">
+    Dla Ethereum lub BNB Chain: MetaMask, Rabby albo Trust Wallet. Dla Solany: Phantom, Solflare albo Backpack.
+  </Card>
+  <Card title="GHX + drugi token" icon="scale-balanced">
+    Mniej więcej równa wartość USD obu — GHX sparowany z ETH (Ethereum), BNB (BNB Chain) albo SOL (Solana).
+  </Card>
+  <Card title="Natywny gas" icon="fire">
+    Mały bufor ETH / BNB / SOL ponad kwotę paired-asset, na opłaty transakcji.
+  </Card>
+  <Card title="DEX do wyboru" icon="arrows-rotate">
+    Uniswap (Ethereum), PancakeSwap (BNB Chain) albo Raydium (Solana).
+  </Card>
+</CardGroup>
+
+## Krok 1 — Dodaj płynność na DEX-ie
+
+Wybierz sieć, na której masz GHX. Jeśli jest na złej sieci, najpierw zbridguj — zobacz [Kontrakty i bridging](/pl/tokenomics/contracts#bridging).
+
+<Tabs>
+  <Tab title="Ethereum (Uniswap)">
+    1. Otwórz [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) i połącz wallet.
+    2. Idź do **Pool** → **New Position**.
+    3. Wybierz parę **GHX / ETH**. Lista tokenów domyślnie nie pokazuje GHX — wklej adres kontraktu `0x728f30fa2f100742c7949d1961804fa8e0b1387d` żeby go zaimportować.
+    4. Ustaw kwoty depozytu. Interfejs auto-balansuje — wpisz jedną stronę, druga się wypełni.
+    5. Zaaprobuj kontrakt GHX (jednorazowo per sieć), potem potwierdź **Add Liquidity**.
+    6. Po potwierdzeniu transakcji **LP tokeny** są w twoim wallecie.
+  </Tab>
+  <Tab title="BNB Chain (PancakeSwap)">
+    1. Otwórz [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) i połącz wallet.
+    2. Idź do **Liquidity** → **Add Liquidity**.
+    3. Wybierz parę **GHX / WBNB**. Wklej `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` jeśli GHX nie wykryty automatycznie.
+    4. Ustaw kwoty depozytu.
+    5. Zaaprobuj kontrakt GHX (jednorazowo per sieć), potem potwierdź **Supply**.
+    6. **Cake-LP tokeny** pojawiają się w wallecie po potwierdzeniu.
+  </Tab>
+  <Tab title="Solana (Raydium)">
+    1. Otwórz [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) i połącz wallet Solana.
+    2. Idź do **Liquidity** → **Create Position**.
+    3. Wybierz pool **GHX / SOL**.
+    4. Ustaw kwoty depozytu i potwierdź.
+    5. **LP tokeny** pojawiają się w wallecie po potwierdzeniu. Solana używa innego modelu niż EVM — nie ma osobnego kroku „approve".
+  </Tab>
+</Tabs>
+
+## Krok 2 — Zstakuj swoje LP tokeny
+
+LP tokeny same w sobie zarabiają tylko opłaty swap. Żeby odblokować bonusowe GHX, musisz je zstakować.
+
+<Steps>
+  <Step title="Otwórz dashboard stakingu">
+    Wejdź na [staking.gamercoin.com](https://staking.gamercoin.com/) i połącz ten sam wallet, który użyłeś na DEX-ie.
+  </Step>
+  <Step title="Przełącz na Liquidity Mining">
+    Idź do sekcji **Liquidity Mining** (osobnej od zakładki **Staking** — upewnij się że wybierasz LP poole, nie GHX-only).
+  </Step>
+  <Step title="Wybierz pasujący pool">
+    Wybierz pool pasujący do LP tokenów które właśnie dostałeś — GHX/ETH na Ethereum, GHX/BNB na BNB Chain albo GHX/SOL na Solanie.
+  </Step>
+  <Step title="Approve kontraktu LP (tylko Ethereum / BNB Chain)">
+    Pierwszorazowi LP stakerzy muszą zaaprobować program na poruszanie ich LP tokenami. Potwierdź w wallecie.
+
+    <Note>
+    Approve to akcja jednorazowa per sieć. Solana używa innego modelu — bez osobnego approve.
+    </Note>
+  </Step>
+  <Step title="Zstakuj LP tokeny">
+    Wpisz ilość LP tokenów do stake'owania (albo kliknij **Max**) i potwierdź transakcję w wallecie.
+  </Step>
+  <Step title="Zweryfikuj pozycję">
+    Twój zstakowany LP pojawi się pod **My Positions** na dashboardzie. Zarówno opłaty (po stronie DEX) jak i bonusowy GHX (po stronie programu) narastają na bieżąco.
+  </Step>
+</Steps>
+
+## Claimowanie bonusowego GHX
+
+Bonusowe nagrody w GHX z programu GamerHash claimuje się na [staking.gamercoin.com](https://staking.gamercoin.com/):
+
+1. Otwórz dashboard połączony z odpowiednią siecią.
+2. Znajdź swoją pozycję LP pod **My Positions**.
+3. Kliknij **Claim**. Potwierdź transakcję.
+
+Zarobki ze swap fee zostają wewnątrz LP tokena automatycznie — kompoundują się w wartość LP i są zrealizowane przy zdjęciu płynności (krok niżej).
+
+## Zdjęcie płynności
+
+Zdjęcie pozycji to odwrócenie wejścia: unstake LP tokens, potem rozbij LP token z powrotem na bazową parę.
+
+<Steps>
+  <Step title="Unstake LP tokenów">
+    Na dashboardzie znajdź pozycję LP i kliknij **Unstake**. Potwierdź transakcję. LP tokeny (plus niezclaimowane bonusy) wracają do walleta.
+  </Step>
+  <Step title="Zdejmij płynność na DEX-ie">
+    Wróć na DEX (Uniswap / PancakeSwap / Raydium) i otwórz swoją pozycję. Kliknij **Remove Liquidity**. LP token się spali; dostajesz GHX **i** drugi token z powrotem, w stosunku jaki pool aktualnie ma — to wtedy realizuje się impermanent loss (albo gain).
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="GHX nie pokazuje się na liście tokenów DEX-a">
+    Wklej adres kontraktu ręcznie. Kanoniczne adresy znajdziesz w [Kontrakty i audyty](/pl/tokenomics/contracts).
+  </Accordion>
+  <Accordion title="Moje LP tokeny nie są widoczne na dashboardzie stakingu">
+    Potwierdź że jesteś na właściwej sieci (chain switcher na dashboardzie) i że jesteś podłączony tym samym wallet'em, który użyłeś na DEX-ie. Odśwież po przełączeniu sieci.
+  </Accordion>
+  <Accordion title="Przycisk 'Stake' jest wyszarzony">
+    Albo nie zaaprobowałeś jeszcze kontraktu LP (krok 4 powyżej), albo wpisana kwota LP przekracza balance walleta.
+  </Accordion>
+  <Accordion title="Moje APR jest dużo niższe niż reklamowane">
+    APR LP-mining zależy od wielkości poolu i całkowitego stake'a LP. Kiedy więcej kapitału wchodzi do poolu, nagroda per-staker spada. Sprawdź aktualne liczby na dashboardzie przed wpłatą.
+  </Accordion>
+  <Accordion title="Martwię się o impermanent loss">
+    IL jest realizowany dopiero przy zdjęciu płynności w stosunku innym niż przy wpłacie. Jeśli GHX i drugi token poruszają się razem, IL jest mały. Jeśli rozchodzą się mocno, IL może przekroczyć bonusowy GHX który zarobiłeś. Przeczytaj [Binance Academy o IL](https://academy.binance.com/en/articles/impermanent-loss-explained) po matematykę.
+  </Accordion>
+</AccordionGroup>
+
+## Następne kroki
+
+<CardGroup cols={2}>
+  <Card title="Jak stakować GHX" icon="lock" href="/pl/tutorials/how-to-stake-ghx">
+    Bez drugiego tokena, bez impermanent loss — po prostu zablokuj GHX po fixed APR.
+  </Card>
+  <Card title="Śledź swoją pozycję" icon="chart-line" href="/pl/resources/track-ghx">
+    Live dane poolu na DexScreener i agregatorach.
+  </Card>
+</CardGroup>

@@ -3,11 +3,16 @@
   "theme": "mint",
   "name": "GamerCoin (GHX) Documentation",
   "colors": {
-    "primary": "#E83C41",
-    "light": "#ED6064",
-    "dark": "#C53034"
+    "primary": "#F41F33",
+    "light": "#F41F33",
+    "dark": "#F41F33"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.svg",
+  "background": {
+    "color": {
+      "dark": "#171A1F"
+    }
+  },
   "banner": {
     "content": "Earn up to 25% APR on Ethereum, BNB Chain, and Solana — [stake your GHX](https://staking.gamercoin.com/)",
     "dismissible": true
@@ -52,17 +57,11 @@
               },
               {
                 "group": "Roadmap",
-                "pages": [
-                  "roadmap/overview",
-                  "roadmap/journey-so-far",
-                  "roadmap/2024-highlights",
-                  "roadmap/whats-next-2025",
-                  "roadmap/future-goals"
-                ]
+                "pages": ["roadmap"]
               },
               {
                 "group": "Tutorials",
-                "pages": ["tutorials/how-to-stake-ghx"]
+                "pages": ["tutorials/how-to-stake-ghx", "tutorials/how-to-provide-liquidity"]
               },
               {
                 "group": "Resources",
@@ -111,17 +110,15 @@
               },
               {
                 "group": "Roadmapa",
-                "pages": [
-                  "pl/roadmap/overview",
-                  "pl/roadmap/journey-so-far",
-                  "pl/roadmap/2024-highlights",
-                  "pl/roadmap/whats-next-2025",
-                  "pl/roadmap/future-goals"
-                ]
+                "pages": ["pl/roadmap"]
+              },
+              {
+                "group": "Tutoriale",
+                "pages": ["pl/tutorials/how-to-stake-ghx", "pl/tutorials/how-to-provide-liquidity"]
               },
               {
                 "group": "Zasoby",
-                "pages": ["pl/useful-links", "pl/resources/glossary"]
+                "pages": ["pl/useful-links", "pl/resources/track-ghx", "pl/resources/glossary"]
               },
               {
                 "group": "Informacje prawne",
@@ -137,54 +134,52 @@
         ]
       },
       {
-        "language": "kr",
+        "language": "ko",
         "tabs": [
           {
             "tab": "문서",
             "groups": [
               {
                 "group": "환영합니다",
-                "pages": ["kr/index"]
+                "pages": ["ko/index"]
               },
               {
                 "group": "토크노믹스",
                 "pages": [
-                  "kr/tokenomics/overview",
-                  "kr/tokenomics/token-description",
-                  "kr/tokenomics/contracts",
-                  "kr/tokenomics/how-to-get",
-                  "kr/tokenomics/distribution",
-                  "kr/tokenomics/burn",
-                  "kr/tokenomics/staking",
-                  "kr/tokenomics/liquidity-mining",
-                  "kr/tokenomics/community-tagging"
+                  "ko/tokenomics/overview",
+                  "ko/tokenomics/token-description",
+                  "ko/tokenomics/contracts",
+                  "ko/tokenomics/how-to-get",
+                  "ko/tokenomics/distribution",
+                  "ko/tokenomics/burn",
+                  "ko/tokenomics/staking",
+                  "ko/tokenomics/liquidity-mining",
+                  "ko/tokenomics/community-tagging"
                 ]
               },
               {
                 "group": "사용 사례",
-                "pages": ["kr/use-cases/education", "kr/use-cases/partners"]
+                "pages": ["ko/use-cases/education", "ko/use-cases/partners"]
               },
               {
                 "group": "로드맵",
-                "pages": [
-                  "kr/roadmap/overview",
-                  "kr/roadmap/journey-so-far",
-                  "kr/roadmap/2024-highlights",
-                  "kr/roadmap/whats-next-2025",
-                  "kr/roadmap/future-goals"
-                ]
+                "pages": ["ko/roadmap"]
+              },
+              {
+                "group": "튜토리얼",
+                "pages": ["ko/tutorials/how-to-stake-ghx", "ko/tutorials/how-to-provide-liquidity"]
               },
               {
                 "group": "리소스",
-                "pages": ["kr/useful-links", "kr/resources/glossary"]
+                "pages": ["ko/useful-links", "ko/resources/track-ghx", "ko/resources/glossary"]
               },
               {
                 "group": "법적 고지",
                 "pages": [
-                  "kr/legal/overview",
-                  "kr/legal/legal-information",
-                  "kr/legal/aml-cft",
-                  "kr/legal/disclaimer"
+                  "ko/legal/overview",
+                  "ko/legal/legal-information",
+                  "ko/legal/aml-cft",
+                  "ko/legal/disclaimer"
                 ]
               }
             ]
@@ -220,7 +215,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Get GHX",
+      "label": "Get $GHX",
       "href": "https://gamercoin.com"
     }
   },

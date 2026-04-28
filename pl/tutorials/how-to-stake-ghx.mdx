@@ -1,0 +1,133 @@
+---
+title: "Jak stakować GHX"
+description: "Krok po kroku: zstakuj GHX na Ethereum, BNB Chain albo Solanie i zarabiaj do 25% APR."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+Ten przewodnik prowadzi przez staking GHX od zera do zarabiania. Szacowany czas: **5–10 minut** plus czas potwierdzenia on-chain.
+
+## Co będziesz potrzebować
+
+<CardGroup cols={2}>
+  <Card title="Web3 wallet" icon="wallet">
+    Dla Ethereum lub BNB Chain: MetaMask, Rabby albo Trust Wallet. Dla Solany: Phantom, Solflare albo Backpack.
+  </Card>
+  <Card title="Tokeny GHX" icon="coins">
+    Na sieci, na której chcesz stakować. Zobacz [Jak zdobyć GHX](/pl/tokenomics/how-to-get).
+  </Card>
+  <Card title="Trochę natywnego gas-u" icon="fire">
+    ETH dla Ethereum, BNB dla BNB Chain albo SOL dla Solany — żeby opłacić transakcje.
+  </Card>
+  <Card title="Docelowy okres blokady" icon="clock">
+    Flexible, 3, 6 albo 12 miesięcy. Dłuższe locki = wyższe APR. Zobacz [Staking](/pl/tokenomics/staking).
+  </Card>
+</CardGroup>
+
+## Walkthrough
+
+<Steps>
+  <Step title="Otwórz dashboard stakingu">
+    Wejdź na [staking.gamercoin.com](https://staking.gamercoin.com/).
+  </Step>
+
+  <Step title="Connect wallet">
+    Kliknij **Connect Wallet** w prawym górnym rogu. Wybierz swojego dostawcę walleta i zatwierdź żądanie połączenia.
+
+    <Tip>
+    Jeśli twój wallet jest na złej sieci, dashboard zaproponuje przełączenie. Zatwierdź network switch.
+    </Tip>
+  </Step>
+
+  <Step title="Wybierz sieć">
+    Wybierz **Ethereum**, **BNB Chain** albo **Solana** na górze dashboardu. Każda sieć ma własne poole, a stake'y nie przenoszą się między nimi — wybierz tę, na której masz GHX.
+  </Step>
+
+  <Step title="Wybierz pool">
+    Poole różnią się okresem blokady i APR:
+
+    | Lock | Ethereum | BNB Chain | Solana |
+    | --- | --- | --- | --- |
+    | Flexible | 10% | 6% | 6% |
+    | 3 miesiące | 10% | 10% | 10% |
+    | 6 miesięcy | 18% | 18% | 18% |
+    | 12 miesięcy | 25% | 25% | 25% |
+
+    <Warning>
+    Zablokowanych poolów nie wycofasz przed wygaśnięciem locka. Wybierz **Flexible**, jeśli możesz potrzebować płynności.
+    </Warning>
+  </Step>
+
+  <Step title="Approve kontraktu GHX (tylko Ethereum / BNB Chain)">
+    Na sieciach EVM pierwszorazowi stakerzy muszą zaaprobować kontrakt stakingu na wydawanie GHX. Kliknij **Approve** i potwierdź w wallecie.
+
+    <Note>
+    Approve to akcja jednorazowa per sieć. Nie będziesz musiał aprobować ponownie na tej samej sieci. Solana używa innego modelu — tam nie ma osobnego kroku approve.
+    </Note>
+  </Step>
+
+  <Step title="Wpisz kwotę i zstakuj">
+    Wpisz ile GHX chcesz zstakować (albo kliknij **Max**), potem kliknij **Stake**. Potwierdź transakcję w wallecie.
+  </Step>
+
+  <Step title="Zweryfikuj swoją pozycję">
+    Po potwierdzeniu transakcji (zwykle pod minutę), twój stake pojawi się w **My Stakes**. Nagrody narastają na bieżąco.
+  </Step>
+</Steps>
+
+## Claimowanie nagród
+
+Nagrody narastają na bieżąco. Żeby zclaimować:
+
+1. Otwórz dashboard stakingu połączony z odpowiednią siecią.
+2. Znajdź swój aktywny stake pod **My Stakes**.
+3. Kliknij **Claim**. Potwierdź transakcję.
+
+Zclaimowane nagrody trafiają do tego samego walleta, który stakował. Nie ma minimalnej kwoty claim, ale każdy claim to transakcja on-chain z gas fee, więc claimowanie małych kwot jest nieekonomiczne (zwłaszcza na Ethereum).
+
+## Unstake
+
+| Typ poolu | Zachowanie unstake |
+| --- | --- |
+| Flexible | Wycofaj kiedy chcesz. Bez kary. |
+| Locked (3 / 6 / 12 miesięcy) | Nie da się wycofać przed wygaśnięciem locka. Po wygaśnięciu — kiedy chcesz. |
+
+<Steps>
+  <Step title="Poczekaj na wygaśnięcie locka (tylko locked poole)">
+    Dashboard pokazuje countdown dla każdego locked stake'a.
+  </Step>
+  <Step title="Kliknij Unstake">
+    Znajdź pozycję pod **My Stakes** i kliknij **Unstake**. Zatwierdź transakcję w wallecie.
+  </Step>
+  <Step title="Zweryfikuj receipt">
+    GHX (plus niezclaimowane nagrody) wraca do twojego walleta po potwierdzeniu on-chain.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Mój GHX jest na złej sieci">
+    Zbridguj go przed stakingiem. Ethereum ↔ BNB Chain idzie przez [cBridge](https://cbridge.celer.network/); trasy Solana są zintegrowane przez Raydium / Jupiter. Aktywne trasy w [Kontrakty i bridging](/pl/tokenomics/contracts#bridging).
+  </Accordion>
+  <Accordion title="Transakcja utknęła pending">
+    Na Ethereum lub BNB Chain zwiększ gas price w wallecie albo cancel i retry z wyższym priority fee. Na Solanie wallet zwykle retry'uje automatycznie — jeśli nie, odśwież i spróbuj ponownie.
+  </Accordion>
+  <Accordion title="Widzę swój balance, ale dashboard pokazuje zero">
+    Potwierdź że jesteś podłączony tym samym adresem walleta, z którego stakowałeś, i że dashboard jest ustawiony na sieć, na której stakowałeś. Odśwież stronę.
+  </Accordion>
+  <Accordion title="APR pokazane jest niższe niż reklamowane">
+    APR-y zależą od pojemności poolu. Headline 25% obowiązuje gdy poole są pełne. Faktyczne APR może być niższe jeśli pool jest over-allocated. Zobacz [Staking](/pl/tokenomics/staking).
+  </Accordion>
+</AccordionGroup>
+
+## Następne kroki
+
+<CardGroup cols={2}>
+  <Card title="Liquidity Mining" icon="droplet" href="/pl/tokenomics/liquidity-mining">
+    Stackuj dodatkowy yield przez LP na Uniswap, PancakeSwap albo Raydium.
+  </Card>
+  <Card title="Śledź swoją pozycję" icon="chart-line" href="/pl/resources/track-ghx">
+    Live wykresy i dane agregatorów.
+  </Card>
+</CardGroup>

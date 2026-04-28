@@ -1,11 +1,13 @@
 ---
 title: "Track GHX"
-description: "Live price, charts, and market data for GamerCoin across all sources."
+description: "Live price, charts, and on-chain data sources for GamerCoin across every supported network."
 ---
 
 import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 
 ## Aggregators
+
+The fastest way to see live price, marketcap, supply, and exchange listings is through one of the standard aggregators:
 
 <CardGroup cols={3}>
   <Card title="CoinGecko" icon="chart-line" href="https://www.coingecko.com/en/coins/gamercoin">
@@ -19,19 +21,25 @@ import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
   </Card>
 </CardGroup>
 
-## Live chart
+## Live charts
 
-<Frame caption="GHX/WBNB live chart on PancakeSwap (BNB Chain). Powered by DexScreener.">
-  <iframe
-    src="https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4?embed=1&theme=dark&trades=0&info=0"
-    width="100%"
-    height="500"
-    style={{border:'1px solid rgba(255,255,255,0.1)',borderRadius:'12px'}}
-    title="GHX live chart on DexScreener"
-  />
-</Frame>
+DexScreener serves real-time charts for every GHX pool across the three chains. Open the one matching the pool you care about:
+
+<CardGroup cols={3}>
+  <Card title="GHX/WETH" icon="ethereum" href="https://dexscreener.com/ethereum/0x728f30fa2f100742c7949d1961804fa8e0b1387d">
+    Ethereum (Uniswap)
+  </Card>
+  <Card title="GHX/WBNB" icon="coins" href="https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4">
+    BNB Chain (PancakeSwap)
+  </Card>
+  <Card title="GHX/SOL" icon="bolt" href="https://dexscreener.com/solana/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7">
+    Solana (Raydium)
+  </Card>
+</CardGroup>
 
 ## Per-chain tracking
+
+Each chain has its own block explorer (for transactions and contract details) and DexScreener page (for pool depth and trading activity).
 
 | Chain | Block explorer | DEX activity |
 | --- | --- | --- |
@@ -39,6 +47,16 @@ import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 | <Bsc /> | [BscScan](https://bscscan.com/token/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) | [DexScreener BSC](https://dexscreener.com/bnb/0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4) |
 | <Sol /> | [Solscan](https://solscan.io/token/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | [DexScreener Solana](https://dexscreener.com/solana/Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) |
 
-<Note>
-Always verify the contract address against [Contracts & Audits](/tokenomics/contracts) before relying on third-party data — fake GHX listings exist on every major aggregator.
-</Note>
+## Canonical contract addresses
+
+Use these to add GHX to a wallet manually or to verify any third-party listing:
+
+| Chain | Address |
+| --- | --- |
+| Ethereum (ERC-20) | `0x728f30fa2f100742c7949d1961804fa8e0b1387d` |
+| BNB Chain (BEP-20) | `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` |
+| Solana (SPL) | `Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7` |
+
+<Warning>
+Fake GHX listings exist on every major aggregator. Always cross-check the contract address against this page or [Contracts & Audits](/tokenomics/contracts) before relying on third-party data.
+</Warning>

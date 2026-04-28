@@ -1,10 +1,12 @@
 ---
 title: "Contracts & Audits"
-description: "Canonical GHX deployments, technical specs, and audit status."
+description: "Canonical GHX deployments, decimals, bridge routes, and audit status."
 ---
 
+GHX runs on three chains. The native deployment lives on Ethereum; the BNB Chain and Solana versions are bridged copies backed by locked supply on the origin chain. The addresses, decimals, and primary DEX for each deployment are below — these are the only authoritative references.
+
 <Warning>
-Always verify the contract address against this page or [gamercoin.com](https://gamercoin.com) before transacting. Tokens with similar names exist on every major chain. The only authoritative addresses are listed below.
+Tokens with similar names exist on every major chain. Always verify a contract address against this page or [gamercoin.com](https://gamercoin.com) before swapping, bridging, or approving spends.
 </Warning>
 
 ## Deployments
@@ -40,37 +42,30 @@ Always verify the contract address against this page or [gamercoin.com](https://
 </Tabs>
 
 <Note>
-**Decimals note.** Ethereum and BNB Chain contracts use 18 decimals (standard ERC-20/BEP-20). The Solana SPL token uses 9 decimals (Solana convention). Always read decimals from the contract before formatting amounts in code.
+**A note on decimals.** Ethereum and BNB Chain use 18 decimals (the ERC-20/BEP-20 default). The Solana SPL token uses 9 decimals (Solana's convention for fungible tokens). Read decimals from the contract directly when formatting amounts in code — never assume.
 </Note>
 
 ## Bridging
 
-```mermaid
-graph LR
-    ETH["Ethereum<br/>ERC-20"]:::eth
-    BSC["BNB Chain<br/>BEP-20"]:::bsc
-    SOL["Solana<br/>SPL"]:::sol
+<Frame>
+  <img src="/images/bridging.png" alt="GHX bridging across Ethereum (ERC-20), BNB Chain (BEP-20), and Solana (SPL) — all three networks fully interconnected" />
+</Frame>
 
-    ETH <-->|cBridge| BSC
-    BSC <-->|Raydium / Jupiter| SOL
-    ETH <-->|2025 Q1| SOL
+All three deployments are interconnected. Live routes:
 
-    classDef eth fill:#627EEA,stroke:#4259c8,color:#fff
-    classDef bsc fill:#F0B90B,stroke:#c69909,color:#000
-    classDef sol fill:#9945FF,stroke:#7e2bdc,color:#fff
-```
+- **Ethereum ↔ BNB Chain** — via [cBridge](https://cbridge.celer.network/) (Celer Network).
+- **Ethereum ↔ Solana** and **BNB Chain ↔ Solana** — also live.
 
-- [cBridge](https://cbridge.celer.network/) — Ethereum ↔ BNB Chain
-- Solana bridge via Raydium / Jupiter (added 2025 Q1). See the [2025 plan](/roadmap/whats-next-2025).
-
-When bridging, supply on the source chain is locked or burned and equivalent supply minted on the destination chain. Total cross-chain supply remains conserved minus burns.
+When you bridge, the source-chain supply is locked or burned and an equivalent amount is minted on the destination chain. Total cross-chain supply stays conserved minus the [historical burns](/tokenomics/burn).
 
 ## Audits
 
 <Note>
-Public smart-contract audit reports are not currently linked from this documentation. If you require an audit attestation for due diligence, contact the GamerHash team via the [community channels](/useful-links#social).
+Public smart-contract audit reports are not linked from this documentation. The GHX whitepaper is registered with the **Malta Financial Services Authority (MFSA)**, and the issuing entity (COINAXE LTD) is registered in Malta. For an audit attestation needed for due diligence, contact the team via the [community channels](/useful-links#social).
 </Note>
 
-## Reporting issues
+## Reporting a security issue
 
-If you discover a security issue with any GHX deployment, please disclose responsibly via the official channels in [Useful Links](/useful-links). Do not post unconfirmed vulnerabilities publicly.
+If you discover a vulnerability in any GHX deployment, **please disclose it privately before posting anywhere public**. The fastest paths are a direct message on the official [Discord](https://gamerhash.com/en/l/Myw09) or [Telegram](https://gamerhash.com/en/l/l9Nb9), or an email through the contact form on [gamerhash.com](https://gamerhash.com).
+
+Do not share exploit details or proof-of-concept code in public channels — even partial disclosure can put user funds at risk before a fix is shipped.

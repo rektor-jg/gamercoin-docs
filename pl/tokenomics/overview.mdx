@@ -1,43 +1,53 @@
 ---
 title: "Przegląd"
-description: "Podaż GHX, sieci, zastosowania i kluczowe mechaniki ekonomiczne."
+description: "Podaż GHX, sieci, zastosowania i mechaniki, które je spinają."
 ---
 
-GHX to wieloblockchainowy token użytkowy. Obsługuje transakcje, nagrody i dostęp do usług w obrębie platformy GamerHash.
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+GHX to warstwa rozliczeniowa ekosystemu GamerHash. Ten sam token płaci za compute AI, generuje yield przez staking i programy płynnościowe, odblokowuje wyższe poziomy w GamerHash AI App i swobodnie przemieszcza się między trzema sieciami.
+
+## Token flow
+
+<Frame>
+  <img src="/images/token-flow.png" alt="Przepływ tokena GHX: udostępnianie GPU i zakup na giełdzie zasilają portfel użytkownika, który kieruje GHX na tier-up w AI App, staking na ETH/BSC/SOL, nagrody LP na Uniswap/PancakeSwap/Raydium, wydatki w GamerHash Store albo bridge między sieciami" />
+</Frame>
+
+GHX wpływa z dwóch źródeł — zarobiony przez udostępnianie GPU w AI App lub kupiony na giełdzie — i wypływa pięcioma ścieżkami, które albo go pomnażają (staking, LP, in-app tier), albo rozliczają (wydatek w Store, bridge między sieciami).
 
 ## Sieci
 
-GHX jest wdrożony na trzech łańcuchach. Płynność jest mostowana między wszystkimi trzema.
+GHX jest wdrożony natywnie na Ethereum i mostowany do BNB Chain i Solany. Wszystkie trzy wdrożenia są ze sobą interoperacyjne przez cBridge i płynność po stronie DEX.
 
 | Łańcuch | Standard | Adres kontraktu |
 | --- | --- | --- |
-| Ethereum | ERC-20 | `0x728f30fa2f100742c7949d1961804fa8e0b1387d` |
-| BNB Chain | BEP-20 | `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` |
-| Solana | SPL | `Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7` |
+| <Eth /> | ERC-20 | `0x728f30fa2f100742c7949d1961804fa8e0b1387d` |
+| <Bsc /> | BEP-20 | `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4` |
+| <Sol /> | SPL | `Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7` |
 
 ## Zastosowania
 
 | Funkcja | Opis |
 | --- | --- |
-| Płatności | W GamerHash Store i usługach GamerHash AI |
-| Nagrody za GPU | Wypłacane użytkownikom udostępniającym moc GPU przez aplikację GamerHash AI |
-| Staking | Blokowany na Ethereum lub BSC dla nagród APR |
-| Liquidity mining | Pozycje LP na PancakeSwap (BSC) zarabiają dodatkowy GHX |
-| Dostęp | Wymagany do niektórych funkcji w aplikacji (np. AI Image Booster prompts) |
+| Płatności | Wydawaj GHX w [GamerHash Store](https://gamerhash.com/en/shop) albo w aplikacji GamerHash AI, by odblokować AI Image Booster prompts. |
+| Nagrody za GPU | Zarobione przez udostępnianie mocy GPU w GamerHash AI App. Wypłacane w GUSD (in-app jednostka USD), konwertowalne na GHX jednym kliknięciem. |
+| Staking | Zablokuj GHX na Ethereum, BNB Chain lub Solanie dla APR — do **25%** przy najdłuższym locku. |
+| Liquidity mining | Dostarcz LP na Uniswap (Ethereum), PancakeSwap (BNB Chain) lub Raydium (Solana) i zarabiaj opłaty z transakcji plus dodatkowe nagrody w GHX. |
+| Tier holdera | Trzymanie i używanie GHX w GamerHash AI App podnosi twój in-app tier, co zwiększa mnożnik GHXP — a większy mnożnik oznacza więcej GHX wypłaconego do ciebie. |
 
 ## Co dalej
 
 <CardGroup cols={2}>
   <Card title="Opis tokena" icon="circle-info" href="/pl/tokenomics/token-description">
-    Szczegółowy podział każdego zastosowania.
+    Bliższe spojrzenie na każde zastosowanie i logikę za nim.
   </Card>
-  <Card title="Jak zdobyć GHX" icon="cart-shopping" href="/pl/tokenomics/how-to-get">
-    CEX, DEX i nagrody w platformie.
+  <Card title="Jak zdobyć GHX" icon="arrow-right-arrow-left" href="/pl/tokenomics/how-to-get">
+    Kup na CEX, swap na DEX lub zarabiaj w platformie.
   </Card>
   <Card title="Dystrybucja" icon="chart-pie" href="/pl/tokenomics/distribution">
-    Alokacja TGE i harmonogram vestingu.
+    Alokacja TGE, harmonogram vestingu i podaż po burnach.
   </Card>
   <Card title="Staking" icon="lock" href="/pl/tokenomics/staking">
-    APR według sieci i okresu blokady.
+    APR i okresy blokady dla każdej obsługiwanej sieci.
   </Card>
 </CardGroup>

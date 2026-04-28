@@ -1,0 +1,142 @@
+---
+title: "유동성 공급 방법"
+description: "단계별 가이드: Uniswap, PancakeSwap, 또는 Raydium에서 유동성을 추가한 다음 LP 토큰을 스테이킹하여 추가 GHX 보상을 받으세요."
+---
+
+유동성 마이닝은 두 가지 수익 흐름을 쌓습니다: LP 풀의 거래 수수료와 GamerHash 프로그램의 보너스 GHX. 둘 다 잠금 해제하려면 DEX에 유동성을 추가하고, LP 토큰을 받고, 그 LP 토큰을 [staking.gamercoin.com](https://staking.gamercoin.com/)에서 스테이킹해야 합니다.
+
+예상 시간: **10~15분** + 온체인 확인 시간.
+
+<Warning>
+유동성을 제공하면 GHX와 페어 자산의 상대 가격이 차이가 날 때 **임퍼머넌트 로스**에 노출됩니다. 자본을 투입하기 전에 [Binance Academy의 임퍼머넌트 로스](https://academy.binance.com/en/articles/impermanent-loss-explained)를 읽어보세요.
+</Warning>
+
+## 필요한 것
+
+<CardGroup cols={2}>
+  <Card title="Web3 지갑" icon="wallet">
+    Ethereum 또는 BNB Chain의 경우: MetaMask, Rabby, 또는 Trust Wallet. Solana의 경우: Phantom, Solflare, 또는 Backpack.
+  </Card>
+  <Card title="GHX + 페어 자산" icon="scale-balanced">
+    각각 비슷한 USD 가치 — GHX와 ETH(Ethereum), BNB(BNB Chain), 또는 SOL(Solana) 페어.
+  </Card>
+  <Card title="네이티브 가스" icon="fire">
+    페어 자산 금액을 넘는 소량의 ETH / BNB / SOL — 거래 수수료 지불용.
+  </Card>
+  <Card title="DEX 선택" icon="arrows-rotate">
+    Uniswap (Ethereum), PancakeSwap (BNB Chain), 또는 Raydium (Solana).
+  </Card>
+</CardGroup>
+
+## 1단계 — DEX에 유동성 추가
+
+GHX가 있는 체인을 선택하세요. 잘못된 체인에 있다면 먼저 브릿지하세요 — [컨트랙트 & 브릿징](/ko/tokenomics/contracts#브릿징) 참조.
+
+<Tabs>
+  <Tab title="Ethereum (Uniswap)">
+    1. [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d)을 열고 지갑을 연결합니다.
+    2. **Pool** → **New Position**으로 이동합니다.
+    3. **GHX / ETH** 페어를 선택합니다. 토큰 목록에서 GHX가 기본으로 표시되지 않을 수 있습니다 — 컨트랙트 주소 `0x728f30fa2f100742c7949d1961804fa8e0b1387d`를 붙여넣어 가져옵니다.
+    4. 입금 금액을 설정합니다. 인터페이스가 자동 균형을 맞춥니다 — 한쪽을 입력하면 다른 쪽이 채워집니다.
+    5. GHX 컨트랙트를 승인하고(체인당 한 번), **Add Liquidity**를 확인합니다.
+    6. 거래가 확인되면 **LP 토큰**이 지갑에 들어옵니다.
+  </Tab>
+  <Tab title="BNB Chain (PancakeSwap)">
+    1. [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56)을 열고 지갑을 연결합니다.
+    2. **Liquidity** → **Add Liquidity**로 이동합니다.
+    3. **GHX / WBNB** 페어를 선택합니다. GHX가 자동 감지되지 않으면 `0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4`를 붙여넣습니다.
+    4. 입금 금액을 설정합니다.
+    5. GHX 컨트랙트를 승인하고(체인당 한 번), **Supply**를 확인합니다.
+    6. 확인 시 **Cake-LP 토큰**이 지갑에 나타납니다.
+  </Tab>
+  <Tab title="Solana (Raydium)">
+    1. [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7)을 열고 Solana 지갑을 연결합니다.
+    2. **Liquidity** → **Create Position**으로 이동합니다.
+    3. **GHX / SOL** 풀을 선택합니다.
+    4. 입금 금액을 설정하고 확인합니다.
+    5. 확인 시 **LP 토큰**이 지갑에 나타납니다. Solana는 EVM과 다른 모델을 사용합니다 — 별도의 "승인" 단계가 없습니다.
+  </Tab>
+</Tabs>
+
+## 2단계 — LP 토큰 스테이킹
+
+LP 토큰 자체는 스왑 수수료만 받습니다. 보너스 GHX 보상을 잠금 해제하려면 스테이킹해야 합니다.
+
+<Steps>
+  <Step title="스테이킹 대시보드 열기">
+    [staking.gamercoin.com](https://staking.gamercoin.com/)으로 이동하여 DEX에서 사용한 동일한 지갑을 연결합니다.
+  </Step>
+  <Step title="Liquidity Mining으로 전환">
+    **Liquidity Mining** 섹션으로 이동합니다(**Staking** 탭과 별개 — LP 풀을 선택하고 GHX 전용 풀이 아닌지 확인하세요).
+  </Step>
+  <Step title="일치하는 풀 선택">
+    방금 받은 LP 토큰과 일치하는 풀을 선택합니다 — Ethereum의 GHX/ETH, BNB Chain의 GHX/BNB, 또는 Solana의 GHX/SOL.
+  </Step>
+  <Step title="LP 컨트랙트 승인 (Ethereum / BNB Chain만)">
+    첫 LP 스테이커는 프로그램이 LP 토큰을 옮길 수 있도록 승인해야 합니다. 지갑에서 확인하세요.
+
+    <Note>
+    승인은 체인당 한 번입니다. Solana는 다른 모델을 사용합니다 — 별도의 승인 단계가 없습니다.
+    </Note>
+  </Step>
+  <Step title="LP 토큰 스테이킹">
+    스테이킹할 LP 토큰 금액을 입력하거나 **Max**를 클릭하고 지갑에서 거래를 확인합니다.
+  </Step>
+  <Step title="포지션 확인">
+    스테이킹된 LP가 대시보드의 **My Positions** 아래에 나타납니다. 수수료 수익(DEX 측)과 보너스 GHX(프로그램 측) 모두 지속적으로 누적됩니다.
+  </Step>
+</Steps>
+
+## 보너스 GHX 청구
+
+GamerHash 프로그램의 보너스 GHX 보상은 [staking.gamercoin.com](https://staking.gamercoin.com/)에서 청구합니다:
+
+1. 올바른 체인에 연결된 상태에서 대시보드를 엽니다.
+2. **My Positions**에서 LP 포지션을 찾습니다.
+3. **Claim**을 클릭합니다. 거래를 확인합니다.
+
+스왑 수수료 수익은 LP 토큰 내부에 자동으로 유지됩니다 — LP 가치로 복리되어 유동성을 제거할 때 실현됩니다(아래 단계).
+
+## 유동성 제거
+
+포지션 제거는 진입의 역순입니다: LP 토큰을 언스테이킹한 다음 LP 토큰을 기본 페어로 분해합니다.
+
+<Steps>
+  <Step title="LP 토큰 언스테이킹">
+    스테이킹 대시보드에서 LP 포지션을 찾아 **Unstake**를 클릭합니다. 거래를 확인합니다. LP 토큰(미청구 보너스 GHX 포함)이 지갑으로 돌아옵니다.
+  </Step>
+  <Step title="DEX에서 유동성 제거">
+    DEX(Uniswap / PancakeSwap / Raydium)로 돌아가서 포지션을 엽니다. **Remove Liquidity**를 클릭합니다. LP 토큰이 소각됩니다; GHX **와** 페어 자산이 풀이 현재 보유한 비율로 돌아옵니다 — 이때 임퍼머넌트 로스(또는 게인)가 실현됩니다.
+  </Step>
+</Steps>
+
+## 문제 해결
+
+<AccordionGroup>
+  <Accordion title="DEX 토큰 목록에 GHX가 없음">
+    컨트랙트 주소를 수동으로 붙여넣으세요. 각 체인의 공식 주소는 [컨트랙트 & 감사](/ko/tokenomics/contracts)를 참조하세요.
+  </Accordion>
+  <Accordion title="LP 토큰이 스테이킹 대시보드에 없음">
+    올바른 체인에 있는지(대시보드 전환기), DEX에서 사용한 동일한 지갑으로 연결되어 있는지 확인하세요. 네트워크를 전환한 후 새로고침하세요.
+  </Accordion>
+  <Accordion title="'Stake' 버튼이 회색으로 비활성화됨">
+    LP 컨트랙트를 아직 승인하지 않았거나(위 4단계), 입력한 LP 토큰 양이 지갑 잔액을 초과합니다.
+  </Accordion>
+  <Accordion title="APR이 광고된 것보다 훨씬 낮음">
+    LP 마이닝 APR은 풀 크기와 총 스테이킹된 LP에 따라 다릅니다. 더 많은 자본이 풀에 들어올수록 스테이커당 보상이 줄어듭니다. 약정 전에 대시보드에서 현재 수치를 확인하세요.
+  </Accordion>
+  <Accordion title="임퍼머넌트 로스가 걱정됨">
+    임퍼머넌트 로스는 입금 시점과 다른 가격 비율로 유동성을 제거할 때만 실현됩니다. GHX와 페어 자산이 함께 움직이면 IL은 작습니다. 크게 차이가 나면 IL이 벌어들인 보너스 GHX를 초과할 수 있습니다. 수학에 대해서는 [Binance Academy의 IL](https://academy.binance.com/en/articles/impermanent-loss-explained)을 읽어보세요.
+  </Accordion>
+</AccordionGroup>
+
+## 다음 단계
+
+<CardGroup cols={2}>
+  <Card title="GHX 스테이킹 방법" icon="lock" href="/ko/tutorials/how-to-stake-ghx">
+    페어 자산 없이, 임퍼머넌트 로스 없이 — 그저 GHX를 고정 APR로 락업하세요.
+  </Card>
+  <Card title="포지션 추적" icon="chart-line" href="/ko/resources/track-ghx">
+    DexScreener와 어그리게이터 페이지의 실시간 풀 데이터.
+  </Card>
+</CardGroup>

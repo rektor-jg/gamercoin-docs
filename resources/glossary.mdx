@@ -1,21 +1,17 @@
 ---
 title: "Glossary"
-description: "Crypto terms and GamerHash-specific concepts referenced in this documentation."
+description: "Crypto, GamerHash-specific, and infrastructure terms referenced throughout this documentation."
 ---
 
-## Tokens & networks
+## Tokens and units
 
 **GHX (GamerCoin)** — Native utility token of the GamerHash ecosystem. Issued on Ethereum and bridged to BNB Chain and Solana.
 
-**GHXP (GamerHash Experience Points)** — Off-chain engagement points earned by running the GamerHash AI App or completing in-app actions. Convertible into GHX. See [How to Get GHX](/tokenomics/how-to-get).
+**GUSD** — In-app USD-denominated unit. GPU-sharing earnings in the GamerHash AI App are paid in GUSD; users can convert it to GHX in one click whenever they choose.
 
-**ERC-20** — Standard token interface on Ethereum. The GHX token's Ethereum deployment.
+**GHXP (GamerHash Experience Points)** — Off-chain engagement points earned by running the GamerHash AI App or completing in-app actions. A higher GHXP balance multiplies GHX rewards for GPU sharing — GHXP is a reward multiplier, not a convertible currency. See [Tokenomics overview](/tokenomics/overview#utility).
 
-**BEP-20** — BNB Chain token standard, equivalent to ERC-20 on a different chain.
-
-**SPL** — Solana Program Library token standard. Solana's equivalent of ERC-20.
-
-**Bridge** — Mechanism for moving a token between blockchains. GamerCoin uses [cBridge](https://cbridge.celer.network/) and other supported bridges to move GHX across Ethereum, BNB Chain, and Solana.
+**Holder tier** — In-app status level driven by holding and using GHX. Higher tiers raise the GHXP multiplier, which translates into more GHX paid out per action.
 
 ## Token economics
 
@@ -26,6 +22,8 @@ description: "Crypto terms and GamerHash-specific concepts referenced in this do
 **Token burn** — Permanent removal of tokens from circulating supply, usually by sending them to an unrecoverable address (eater address). See [Token Burn](/tokenomics/burn).
 
 **Eater address** — A wallet address from which tokens cannot be sent or withdrawn, used for verifiable burns.
+
+**Buyback-and-burn** — Mechanism in which platform revenue is used to buy tokens from the open market; some are then burned and some routed to user rewards. See [Token Burn](/tokenomics/burn#ongoing-buyback-and-burn).
 
 **Circulating supply** — Tokens currently available on the open market (excludes locked, burned, and unvested allocations).
 
@@ -45,9 +43,25 @@ description: "Crypto terms and GamerHash-specific concepts referenced in this do
 
 **Impermanent loss** — Value lost (relative to simply holding) when the prices of two pooled assets diverge after deposit.
 
-## Trading & infrastructure
+## Networks and infrastructure
 
-**CEX (Centralized Exchange)** — A traditional, custodial trading platform (e.g. KuCoin, Bithumb, MEXC).
+**ERC-20** — Standard token interface on Ethereum. The GHX token's Ethereum deployment.
+
+**BEP-20** — BNB Chain token standard, equivalent to ERC-20 on a different chain.
+
+**SPL** — Solana Program Library token standard. Solana's equivalent of ERC-20.
+
+**Bridge** — Mechanism for moving a token between blockchains. GHX uses [cBridge](https://cbridge.celer.network/) for Ethereum ↔ BNB Chain, and Raydium / Jupiter integrations for routes involving Solana. See [Contracts & Bridging](/tokenomics/contracts#bridging).
+
+**deAPI** — Public OpenAI-compatible API exposing the GamerHash GPU network to developers. Available at [deapi.ai](https://deapi.ai).
+
+**n8n** — Open-source workflow-automation platform. deAPI is shipped as an official n8n node, enabling no-code orchestration of AI workloads on the GamerHash network.
+
+**DePIN (Decentralized Physical Infrastructure Network)** — Category of protocols that incentivize participants to provide real-world infrastructure (compute, storage, bandwidth, etc.) via crypto rewards. The GamerHash GPU network is a DePIN; GHX is tagged as DePIN on CoinGecko.
+
+## Trading
+
+**CEX (Centralized Exchange)** — A traditional, custodial trading platform (e.g. KuCoin, Bithumb, MEXC, Gate.io).
 
 **DEX (Decentralized Exchange)** — A non-custodial, on-chain trading venue (e.g. Uniswap, PancakeSwap, Raydium).
 
@@ -55,11 +69,9 @@ description: "Crypto terms and GamerHash-specific concepts referenced in this do
 
 **Slippage** — Difference between expected and executed swap price, caused by trade size relative to pool depth.
 
-## Categories on listing platforms
+## Listing categories
 
-**DePIN (Decentralized Physical Infrastructure Network)** — A category for protocols that incentivize participants to provide real-world infrastructure (compute, storage, bandwidth, etc.) via crypto rewards. GHX is tagged as DePIN on CoinGecko.
-
-**GameFi** — Crypto category combining gaming and finance (token-based games, play-to-earn, in-game economies).
+**GameFi** — Crypto category combining gaming and finance (token-based games, in-game economies).
 
 **AI Applications** — Tag for tokens powering AI-related infrastructure or services.
 

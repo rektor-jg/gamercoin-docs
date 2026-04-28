@@ -1,0 +1,50 @@
+---
+title: "GHX 획득 방법"
+description: "거래소에서 구매, 플랫폼 내 획득, 또는 GHXP로 보상 부스트."
+---
+
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
+
+GHX를 얻는 두 가지 경로가 있습니다: 공개 시장에서 **구매**하거나, GamerHash 생태계에 참여하여 **획득**하는 것입니다. 대부분의 사용자는 두 가지를 혼합합니다 — 거래소에서 시작 포지션을 열고 스테이킹, LP, 앱 내 보상을 통해 늘립니다.
+
+## 거래소에서 구매
+
+GHX는 2021년 4월부터 지속적으로 거래되어 왔습니다. 이 토큰은 모든 지원 체인에 걸쳐 4개의 중앙화 거래소와 3개의 탈중앙화 거래소에 상장되어 있습니다.
+
+### 중앙화 거래소 (CEX)
+
+| 거래소 | 페어 | 지역 |
+| --- | --- | --- |
+| [Bithumb](https://www.bithumb.com/react/trade/order/GHX-KRW) | GHX/KRW | 한국 |
+| [KuCoin](https://www.kucoin.com/trade/GHX-USDT) | GHX/USDT | 글로벌 |
+| [MEXC](https://www.mexc.com/exchange/GHX_USDT) | GHX/USDT | 글로벌 |
+| [Gate.io](https://www.gate.io/trade/GHX_USDT) | GHX/USDT | 글로벌 |
+
+첫 상장은 **2021년 4월 8일** Bithumb에 이루어졌으며, 한국 시장을 열었습니다.
+
+### 탈중앙화 거래소 (DEX)
+
+| DEX | 네트워크 | 페어 |
+| --- | --- | --- |
+| [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | <Eth /> | GHX/WETH |
+| [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | <Bsc /> | GHX/WBNB |
+| [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | <Sol /> | GHX/SOL |
+
+<Warning>
+스왑하기 전에 항상 컨트랙트 주소를 확인하세요. 공식 주소는 [토큰 설명](/ko/tokenomics/token-description)이나 [컨트랙트 & 감사](/ko/tokenomics/contracts)를 참조하세요.
+</Warning>
+
+## 플랫폼 내 획득
+
+| 방법 | 작동 방식 |
+| --- | --- |
+| **GPU 공유** | [GamerHash AI 앱](https://gamerhash.com/pl/app-download)을 실행하고 AI 워크로드용 유휴 GPU를 공유하세요. 보상은 GUSD(앱 내 USD 단위)로 지급되며 클릭 한 번으로 GHX로 변환 가능. |
+| **GHXP 부스트** | AI 앱 활동으로 GamerHash Experience Points (GHXP)를 획득하세요. GHXP가 많을수록 GPU 공유에 대한 GHX 보상이 높아집니다 — GHXP는 보상 배수이며 변환 가능한 화폐가 아닙니다. |
+| **커뮤니티 캠페인** | [공식 채널](/ko/useful-links#커뮤니티)을 통해 발표되는 에어드랍, 콘테스트, 파트너 프로모션. |
+| **스테이킹 & LP 보상** | [스테이킹](/ko/tokenomics/staking) 또는 [유동성 마이닝](/ko/tokenomics/liquidity-mining)으로 기존 포지션 복리. |
+
+플랫폼 내에서 획득한 GHX는 앱 내 지갑으로 들어옵니다. 거기에서 자신의 지갑으로 온체인 출금하거나 [GamerHash 스토어](https://gamerhash.com/en/shop)에서 직접 사용할 수 있습니다.
+
+## 체인 간 GHX 이동
+
+이미 GHX를 보유하고 있지만 잘못된 네트워크에 있는 경우 — 예: Ethereum에 있지만 Solana에서 스테이킹하고 싶은 경우 — 브릿지하세요. 활성 경로는 [컨트랙트 & 브릿징](/ko/tokenomics/contracts#브릿징)을 참조하세요.

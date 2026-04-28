@@ -1,39 +1,23 @@
 ---
 title: "Overview"
-description: "GHX supply, networks, utility, and key economic mechanics."
+description: "GHX supply, networks, utility, and the mechanics that tie them together."
 ---
 
 import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 
-GHX is a multi-chain utility token. It powers transactions, rewards, and access to services across the GamerHash platform.
+GHX is the settlement layer of the GamerHash ecosystem. The same token pays for AI compute, accrues yield through staking and liquidity programs, unlocks higher tiers inside the GamerHash AI App, and moves freely across three chains.
 
 ## Token flow
 
-```mermaid
-graph LR
-    GPU([Share GPU power]):::input
-    AI{{GamerHash AI App}}:::process
-    BUY([Buy on exchange]):::input
+<Frame>
+  <img src="/images/token-flow.png" alt="GHX token flow: GPU sharing and exchange purchases feed the user wallet, which routes GHX to tier-up in the AI App, staking on ETH/BSC/SOL, LP rewards on Uniswap/PancakeSwap/Raydium, spending in the GamerHash Store, or bridging across chains" />
+</Frame>
 
-    GPU --> AI
-    AI -->|GHX rewards| W[(User wallet)]
-    BUY --> W
-
-    W --> S[Stake on ETH or BSC<br/>up to 25% APR]:::yield
-    W --> LP[Provide LP on PancakeSwap<br/>fees + rewards]:::yield
-    W --> ST[Spend in GamerHash Store]:::spend
-    W --> BR[Bridge across chains]:::move
-
-    classDef input fill:#2AD46F,stroke:#1FB85C,color:#0F1115
-    classDef process fill:#E83C41,stroke:#C53034,color:#fff
-    classDef yield fill:#F59E0B,stroke:#D97706,color:#0F1115
-    classDef spend fill:#3B82F6,stroke:#2563EB,color:#fff
-    classDef move fill:#9945FF,stroke:#7e2bdc,color:#fff
-```
+GHX flows in from two directions — earned by sharing GPU power in the AI App, or bought on an exchange — and out through five paths that either compound it (staking, LP, in-app tier) or settle it (Store spend, cross-chain bridge).
 
 ## Networks
 
-GHX is deployed on three chains. Liquidity is bridged across all three.
+GHX is deployed natively on Ethereum and bridged to BNB Chain and Solana. All three deployments are interoperable through cBridge and DEX-side liquidity.
 
 | Chain | Standard | Contract |
 | --- | --- | --- |
@@ -45,25 +29,25 @@ GHX is deployed on three chains. Liquidity is bridged across all three.
 
 | Function | Description |
 | --- | --- |
-| Payments | Used inside the GamerHash Store and across GamerHash AI services |
-| GPU compute rewards | Distributed to users who share GPU power via the GamerHash AI App |
-| Staking | Locked on Ethereum or BSC for APR rewards |
-| Liquidity mining | LP positions on PancakeSwap (BSC) earn additional GHX |
-| Access | Required for certain in-app features (e.g. AI Image Booster prompts) |
+| Payments | Spend GHX in the [GamerHash Store](https://gamerhash.com/en/shop), or in the GamerHash AI App to unlock the AI Image Booster prompts. |
+| GPU compute rewards | Earned by sharing GPU power through the GamerHash AI App. Paid in GUSD (the in-app USD unit) and convertible to GHX in one click. |
+| Staking | Lock GHX on Ethereum, BNB Chain, or Solana for fixed-term APR — up to **25%** at the longest lock. |
+| Liquidity mining | Provide LP on Uniswap (Ethereum), PancakeSwap (BNB Chain), or Raydium (Solana) and earn swap fees plus additional GHX rewards. |
+| Holder tier | Holding and using GHX in the GamerHash AI App levels up your in-app tier, which raises your GHXP multiplier — and a higher multiplier means more GHX paid out to you. |
 
 ## Where to next
 
 <CardGroup cols={2}>
   <Card title="Token Description" icon="circle-info" href="/tokenomics/token-description">
-    Detailed breakdown of each utility.
+    A closer look at each utility and the rationale behind it.
   </Card>
-  <Card title="How to Get GHX" icon="cart-shopping" href="/tokenomics/how-to-get">
-    CEX, DEX, and platform earnings.
+  <Card title="How to Get GHX" icon="arrow-right-arrow-left" href="/tokenomics/how-to-get">
+    Buy on a CEX, swap on a DEX, or earn it in-platform.
   </Card>
   <Card title="Distribution" icon="chart-pie" href="/tokenomics/distribution">
-    TGE allocation and vesting.
+    TGE allocation, vesting timeline, and post-burn supply.
   </Card>
   <Card title="Staking" icon="lock" href="/tokenomics/staking">
-    APRs by network and lock period.
+    APRs and lock periods for every supported network.
   </Card>
 </CardGroup>

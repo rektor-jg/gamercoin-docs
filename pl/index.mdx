@@ -7,7 +7,7 @@ mode: "wide"
 import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 
 <Frame>
-  <img src="/images/hero.svg" alt="GamerCoin (GHX) — wieloblockchainowy token użytkowy ekosystemu GamerHash" />
+  <img src="/images/hero.png" alt="GamerCoin (GHX) — wieloblockchainowy token użytkowy ekosystemu GamerHash" />
 </Frame>
 
 GHX to natywny token użytkowy [GamerHash](https://gamerhash.com) — sieci, która zamienia bezczynne, konsumenckie GPU w moc obliczeniową dla AI. Token nie jest abstrakcyjnym roszczeniem do przyszłego produktu. To warstwa rozliczeniowa rozproszonej sieci compute, która już teraz obsługuje realnych użytkowników, partnerów i aplikacje AI.
@@ -25,23 +25,9 @@ GHX to natywny token użytkowy [GamerHash](https://gamerhash.com) — sieci, kt�
 
 ## Jak działa ekonomia GHX
 
-```mermaid
-graph LR
-    U([Użytkownicy aplikacji]):::user
-    D{{Sieć DePIN GPU}}:::depin
-    G((GHX)):::token
-    P([Partnerzy i deweloperzy]):::partner
-
-    U -->|Udostępnij bezczynne GPU| D
-    D -->|Podaż compute| P
-    P -->|Płatność za compute| G
-    G -->|Buyback i burn<br/>Nagrody i APR| U
-
-    classDef user fill:#2AD46F,stroke:#1FB85C,color:#0F1115
-    classDef depin fill:#E83C41,stroke:#C53034,color:#fff
-    classDef token fill:#F59E0B,stroke:#D97706,color:#0F1115
-    classDef partner fill:#9945FF,stroke:#7e2bdc,color:#fff
-```
+<Frame>
+  <img src="/images/economy-flow.png" alt="Przepływ ekonomii GHX: użytkownicy aplikacji udostępniają bezczynne GPU, sieć DePIN GPU dostarcza compute partnerom i deweloperom, którzy płacą GHX, którego część idzie na buyback & burn oraz nagrody i APR z powrotem do użytkowników" />
+</Frame>
 
 Użytkownicy udostępniają moc GPU. DePIN agreguje ją i kieruje do zadań AI. Partnerzy i deweloperzy płacą za compute. Część przychodów jest używana do skupowania GHX z otwartego rynku i palenia tokenów; reszta trafia do kontrybutorów. Pętla wzmacnia się wraz z dołączaniem kolejnych partnerów.
 
@@ -108,11 +94,11 @@ Zespół publikuje miesięczne community updates i dłuższe artykuły na [Mediu
 
 ## Zakres dokumentacji
 
-- **Tokenomia** — podaż, dystrybucja, burn, staking, programy płynnościowe, kontrakty.
-- **Zastosowania** — integracje partnerskie i programy edukacyjne wykorzystujące GHX.
-- **Tutoriale** — przewodniki end-to-end dla najczęstszych operacji.
-- **Roadmapa** — co dostarczyliśmy i co dalej.
-- **Zasoby** — live data, glossary, przydatne linki.
-- **Informacje prawne** — whitepaper, polityka AML/CFT, disclaimer.
+- **Tokenomia** — pełny obraz GHX: podaż, dystrybucja, burny, programy stakingowe i płynnościowe oraz adresy kontraktów na każdej z sieci.
+- **Zastosowania** — jak partnerzy integrują GHX i jak społeczność zarabia przez programy edukacyjne i zadania.
+- **Tutoriale** — przewodniki krok po kroku dla najczęstszych operacji, napisane tak, by nowy użytkownik skończył je w jednym posiedzeniu.
+- **Roadmapa** — kwartalny rejestr dostarczonych funkcji, prac w toku i kierunku rozwoju.
+- **Zasoby** — live data rynkowe, słownik pojęć krypto i ręcznie dobrana lista linków po ekosystemie.
+- **Informacje prawne** — wyciągi z whitepapera, polityka AML/CFT i oficjalny disclaimer.
 
-Dokumentacja platformy GamerHash (aplikacje, AI, miner technology) znajduje się w [GamerHash docs](https://docs.gamerhash.com).
+Szukasz dokumentacji samej platformy GamerHash — aplikacji, AI, szerszego ekosystemu? Zajrzyj do [GamerHash docs](https://docs.gamerhash.com).

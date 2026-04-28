@@ -1,78 +1,86 @@
 ---
-title: "Glossary"
-description: "Crypto terms and GamerHash-specific concepts referenced in this documentation."
+title: "Słownik"
+description: "Pojęcia krypto, GamerHash-owe i infrastrukturalne używane w tej dokumentacji."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+## Tokeny i jednostki
 
-## Tokens & networks
+**GHX (GamerCoin)** — Natywny token użytkowy ekosystemu GamerHash. Wyemitowany na Ethereum i bridgowany do BNB Chain i Solany.
 
-**GHX (GamerCoin)** — Native utility token of the GamerHash ecosystem. Issued on Ethereum and bridged to BNB Chain and Solana.
+**GUSD** — In-app jednostka denominowana w USD. Zarobki za udostępnianie GPU w GamerHash AI App są wypłacane w GUSD; użytkownik może je w dowolnym momencie skonwertować na GHX jednym kliknięciem.
 
-**GHXP (GamerHash Experience Points)** — Off-chain engagement points earned by running the GamerHash AI App or completing in-app actions. Convertible into GHX. See [How to Get GHX](/tokenomics/how-to-get).
+**GHXP (GamerHash Experience Points)** — Off-chainowe punkty zaangażowania zarabiane przez uruchamianie GamerHash AI App albo wykonywanie akcji w aplikacji. Wyższy stan GHXP zwiększa mnożnik nagród GHX za udostępnianie GPU — GHXP to mnożnik, nie konwertowalna waluta. Zobacz [Tokenomia — przegląd](/pl/tokenomics/overview#zastosowania).
 
-**ERC-20** — Standard token interface on Ethereum. The GHX token's Ethereum deployment.
+**Tier holdera** — In-app poziom statusu napędzany trzymaniem i używaniem GHX. Wyższe tiery podnoszą mnożnik GHXP, co przekłada się na więcej GHX wypłaconego za akcję.
 
-**BEP-20** — BNB Chain token standard, equivalent to ERC-20 on a different chain.
+## Ekonomia tokena
 
-**SPL** — Solana Program Library token standard. Solana's equivalent of ERC-20.
+**TGE (Token Generation Event)** — Moment, w którym token jest po raz pierwszy tworzony on-chain i staje się dostępny. TGE GHX: 31 grudnia 2020.
 
-**Bridge** — Mechanism for moving a token between blockchains. GamerCoin uses [cBridge](https://cbridge.celer.network/) and other supported bridges to move GHX across Ethereum, BNB Chain, and Solana.
+**Vesting** — Czasowo blokowane uwalnianie zaalokowanych tokenów, zwykle przez miesiące albo lata, w celu wyrównania długoterminowych interesów.
 
-## Token economics
+**Token burn** — Trwałe usunięcie tokenów z podaży w obiegu, zwykle przez wysłanie ich na nieodzyskiwalny adres (eater address). Zobacz [Token Burn](/pl/tokenomics/burn).
 
-**TGE (Token Generation Event)** — The moment a token is initially created on-chain and becomes available. GHX TGE: 31 December 2020.
+**Eater address** — Adres portfela, z którego nie da się wysłać ani wycofać tokenów, używany do weryfikowalnych burnów.
 
-**Vesting** — Time-locked release of allocated tokens, typically over months or years, to align long-term incentives.
+**Buyback-and-burn** — Mechanizm, w którym przychody platformy są używane do skupowania tokenów z otwartego rynku; część jest następnie palona, część kierowana do nagród użytkowników. Zobacz [Token Burn](/pl/tokenomics/burn#ciagly-buyback-and-burn).
 
-**Token burn** — Permanent removal of tokens from circulating supply, usually by sending them to an unrecoverable address (eater address). See [Token Burn](/tokenomics/burn).
+**Podaż w obiegu** — Tokeny aktualnie dostępne na otwartym rynku (wyłącza zablokowane, spalone i niezvestowane alokacje).
 
-**Eater address** — A wallet address from which tokens cannot be sent or withdrawn, used for verifiable burns.
+## Mechaniki zarabiania
 
-**Circulating supply** — Tokens currently available on the open market (excludes locked, burned, and unvested allocations).
+**Staking** — Blokowanie tokenów na określony czas w celu zarabiania yieldu. Zobacz [Staking](/pl/tokenomics/staking).
 
-## Earning mechanisms
+**APR (Annual Percentage Rate)** — Roczna stawka zwrotu, nieskładana. Używana dla nagród stakingowych.
 
-**Staking** — Locking tokens for a defined period to earn yield. See [Staking](/tokenomics/staking).
+**APY (Annual Percentage Yield)** — Roczna stawka zwrotu, składana. Zwykle wyższa niż APR przy tej samej stawce nominalnej.
 
-**APR (Annual Percentage Rate)** — Annualized return rate, not compounded. Used for staking rewards.
+**Liquidity Mining** — Zarabianie nagród tokenowych przez dostarczanie płynności do poolu DEX. Zobacz [Liquidity Mining](/pl/tokenomics/liquidity-mining).
 
-**APY (Annual Percentage Yield)** — Annualized return rate, compounded. Generally higher than APR for the same nominal rate.
+**Liquidity Pool (LP)** — Pula dwóch sparowanych tokenów (np. GHX/BNB), przeciwko której traderzy wymieniają tokeny na DEX.
 
-**Liquidity Mining** — Earning token rewards by providing liquidity to a DEX pool. See [Liquidity Mining](/tokenomics/liquidity-mining).
+**LP token** — Token-paragon wystawiany przy wpłacie do poolu płynności. Reprezentuje twój udział w poolu.
 
-**Liquidity Pool (LP)** — A pool of two paired tokens (e.g. GHX/BNB) that traders swap against on a DEX.
+**Impermanent loss** — Wartość utracona (względem zwykłego trzymania), kiedy ceny dwóch tokenów w poolu rozchodzą się od siebie po wpłacie.
 
-**LP token** — Receipt token issued when you deposit into a liquidity pool. Represents your share of the pool.
+## Sieci i infrastruktura
 
-**Impermanent loss** — Value lost (relative to simply holding) when the prices of two pooled assets diverge after deposit.
+**ERC-20** — Standardowy interfejs tokena na Ethereum. Wdrożenie GHX na Ethereum.
 
-## Trading & infrastructure
+**BEP-20** — Standard tokenowy BNB Chain, ekwiwalent ERC-20 na innej sieci.
 
-**CEX (Centralized Exchange)** — A traditional, custodial trading platform (e.g. KuCoin, Bithumb, MEXC).
+**SPL** — Solana Program Library, standard tokenowy. Solanowy odpowiednik ERC-20.
 
-**DEX (Decentralized Exchange)** — A non-custodial, on-chain trading venue (e.g. Uniswap, PancakeSwap, Raydium).
+**Bridge** — Mechanizm przenoszenia tokena między blockchainami. GHX używa [cBridge](https://cbridge.celer.network/) dla Ethereum ↔ BNB Chain, oraz integracji Raydium / Jupiter dla tras z udziałem Solany. Zobacz [Kontrakty i bridging](/pl/tokenomics/contracts#bridging).
 
-**AMM (Automated Market Maker)** — Algorithmic pricing model used by most DEXes; trades execute against a liquidity pool rather than an order book.
+**deAPI** — Publiczne API kompatybilne z OpenAI udostępniające sieć GPU GamerHasha deweloperom. Dostępne na [deapi.ai](https://deapi.ai).
 
-**Slippage** — Difference between expected and executed swap price, caused by trade size relative to pool depth.
+**n8n** — Open-source'owa platforma do automatyzacji workflow. deAPI jest wydane jako oficjalny węzeł n8n, umożliwiając no-code orkiestrację zadań AI na sieci GamerHasha.
 
-## Categories on listing platforms
+**DePIN (Decentralized Physical Infrastructure Network)** — Kategoria protokołów, które motywują uczestników do dostarczania realnej infrastruktury (compute, storage, bandwidth itd.) za nagrody krypto. Sieć GPU GamerHasha to DePIN; GHX jest otagowany jako DePIN na CoinGecko.
 
-**DePIN (Decentralized Physical Infrastructure Network)** — A category for protocols that incentivize participants to provide real-world infrastructure (compute, storage, bandwidth, etc.) via crypto rewards. GHX is tagged as DePIN on CoinGecko.
+## Trading
 
-**GameFi** — Crypto category combining gaming and finance (token-based games, play-to-earn, in-game economies).
+**CEX (Centralized Exchange)** — Tradycyjna, custodial platforma tradingowa (np. KuCoin, Bithumb, MEXC, Gate.io).
 
-**AI Applications** — Tag for tokens powering AI-related infrastructure or services.
+**DEX (Decentralized Exchange)** — Non-custodial, on-chainowy venue tradingowy (np. Uniswap, PancakeSwap, Raydium).
+
+**AMM (Automated Market Maker)** — Algorytmiczny model wyceny używany przez większość DEX-ów; transakcje wykonują się przeciwko poolowi płynności, a nie księdze zleceń.
+
+**Slippage** — Różnica między oczekiwaną a wykonaną ceną swapu, spowodowana wielkością transakcji względem głębokości poolu.
+
+## Kategorie listingowe
+
+**GameFi** — Kategoria krypto łącząca gaming i finanse (gry tokenowe, ekonomie in-game).
+
+**AI Applications** — Tag dla tokenów napędzających infrastrukturę albo usługi związane z AI.
 
 ## Compliance
 
-**AML (Anti–Money Laundering)** — Regulatory framework requiring monitoring and reporting of suspicious financial activity.
+**AML (Anti–Money Laundering)** — Ramy regulacyjne wymagające monitoringu i raportowania podejrzanej aktywności finansowej.
 
-**CFT (Counter-Financing of Terrorism)** — Regulations targeting the use of financial systems for terrorism financing.
+**CFT (Counter-Financing of Terrorism)** — Regulacje dotyczące używania systemów finansowych do finansowania terroryzmu.
 
-**PMLFTR** — Malta's Prevention of Money Laundering and Funding of Terrorism Regulations. Referenced in [AML / CFT](/legal/aml-cft).
+**PMLFTR** — Maltańska Prevention of Money Laundering and Funding of Terrorism Regulations. Wspomniana w [AML / CFT](/pl/legal/aml-cft).
 
-**MFSA (Malta Financial Services Authority)** — Maltese regulator with which the GHX whitepaper is registered.
+**MFSA (Malta Financial Services Authority)** — Maltański regulator, w którym zarejestrowany jest whitepaper GHX.

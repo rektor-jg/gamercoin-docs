@@ -1,45 +1,50 @@
 ---
-title: "How to Get GHX"
-description: "Buy on exchanges, earn through GPU sharing, or convert GHXP."
+title: "Jak zdobyć GHX"
+description: "Kup na giełdach, zarabiaj w platformie albo zwiększaj nagrody przez GHXP."
 ---
 
-<Note>
-  Polskie tłumaczenie tej strony jest w przygotowaniu. Poniżej wersja angielska.
-</Note>
+import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 
-There are two paths: **buy** on the open market, or **earn** inside the GamerHash ecosystem.
+Masz dwie drogi do GHX: **kup** go na otwartym rynku albo **zarabiaj** uczestnicząc w ekosystemie GamerHash. Większość użytkowników łączy oba podejścia — otwiera startową pozycję na giełdzie, a potem rośnie ją przez staking, LP albo nagrody w aplikacji.
 
-## On exchanges
+## Kup na giełdach
 
-### Centralized (CEX)
+GHX jest nieprzerwanie tradeowalny od kwietnia 2021. Token jest notowany na czterech giełdach centralnych i trzech zdecentralizowanych — na każdej obsługiwanej sieci.
 
-| Exchange | Pair | Region |
+### Giełdy centralne (CEX)
+
+| Giełda | Para | Region |
 | --- | --- | --- |
-| [Bithumb](https://www.bithumb.com/react/trade/order/GHX-KRW) | GHX/KRW | South Korea |
-| [KuCoin](https://www.kucoin.com/trade/GHX-USDT) | GHX/USDT | Global |
-| [MEXC](https://www.mexc.com/exchange/GHX_USDT) | GHX/USDT | Global |
+| [Bithumb](https://www.bithumb.com/react/trade/order/GHX-KRW) | GHX/KRW | Korea Południowa |
+| [KuCoin](https://www.kucoin.com/trade/GHX-USDT) | GHX/USDT | Globalnie |
+| [MEXC](https://www.mexc.com/exchange/GHX_USDT) | GHX/USDT | Globalnie |
+| [Gate.io](https://www.gate.io/trade/GHX_USDT) | GHX/USDT | Globalnie |
 
-First listing was on Bithumb on **8 April 2021**.
+Pierwszy listing miał miejsce na Bithumbie **8 kwietnia 2021**, otwierając rynek południowokoreański.
 
-### Decentralized (DEX)
+### Giełdy zdecentralizowane (DEX)
 
-| DEX | Network | Pair |
+| DEX | Sieć | Para |
 | --- | --- | --- |
-| [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | Ethereum | GHX/WETH |
-| [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | BNB Chain | GHX/WBNB |
-| [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | Solana | GHX/SOL |
+| [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x728f30fa2f100742c7949d1961804fa8e0b1387d) | <Eth /> | GHX/WETH |
+| [PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0xbd7b8e4de08d9b01938f7ff2058f110ee1e0e8d4&chainId=56) | <Bsc /> | GHX/WBNB |
+| [Raydium](https://raydium.io/swap/?inputMint=sol&outputMint=Cy52Ts2GwSzdkhCihB5i1Vu6sApzgqktNNFyHbsdgwm7) | <Sol /> | GHX/SOL |
 
 <Warning>
-Always confirm the contract address before swapping. See [Token Description](/tokenomics/token-description) for the canonical addresses.
+Zawsze potwierdź adres kontraktu przed swapem. Kanoniczne adresy znajdziesz w [Opis tokena](/pl/tokenomics/token-description) lub [Kontrakty i audyty](/pl/tokenomics/contracts).
 </Warning>
 
-## Inside the GamerHash platform
+## Zarabiaj w platformie
 
-| Method | How it works |
+| Metoda | Jak to działa |
 | --- | --- |
-| **GPU sharing** | Run the [GamerHash AI App](https://gamerhash.com/pl/app-download) and earn GHX for contributing GPU compute |
-| **GHXP conversion** | Convert accumulated GamerHash Experience Points (GHXP) into GHX |
-| **Community campaigns** | Airdrops, contests, and partner promotions |
-| **Staking & LP rewards** | Earn GHX by participating in [staking](/tokenomics/staking) or [liquidity mining](/tokenomics/liquidity-mining) |
+| **Udostępnianie GPU** | Uruchom [GamerHash AI App](https://gamerhash.com/pl/app-download) i udostępnij bezczynną moc GPU dla zadań AI. Wypłata trafia w **GUSD** (in-app jednostka USD), którą jednym kliknięciem konwertujesz na GHX. |
+| **Boost GHXP** | Zarabiaj GamerHash Experience Points (GHXP) za aktywność w aplikacji AI. Im więcej GHXP zgromadzisz, tym wyższe nagrody w GHX za udostępnianie GPU — GHXP to mnożnik nagród, nie konwertowalna waluta. |
+| **Kampanie społecznościowe** | Airdropy, konkursy i promocje partnerskie ogłaszane na [oficjalnych kanałach](/pl/useful-links#social). |
+| **Nagrody ze stakingu i LP** | Pomnażaj istniejącą pozycję przez [staking](/pl/tokenomics/staking) lub [liquidity mining](/pl/tokenomics/liquidity-mining). |
 
-GHX earned in-platform credits to the user wallet. From there it can be withdrawn to an external wallet or spent in the [GamerHash Store](https://gamerhash.com/en/shop).
+GHX zarobiony w platformie trafia do portfela w aplikacji. Stamtąd możesz wypłacić go on-chain na swój portfel albo wydać bezpośrednio w [GamerHash Store](https://gamerhash.com/en/shop).
+
+## Przenieś GHX między sieciami
+
+Masz GHX, ale nie na tej sieci, której potrzebujesz — np. na Ethereum, a chcesz stakować na Solanie? Zbridguj. Aktywne trasy znajdziesz w [Kontrakty i bridging](/pl/tokenomics/contracts#bridging).

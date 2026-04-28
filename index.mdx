@@ -7,7 +7,7 @@ mode: "wide"
 import { Eth, Bsc, Sol } from '/snippets/chains.mdx'
 
 <Frame>
-  <img src="/images/hero.svg" alt="GamerCoin (GHX) — multi-chain utility token of the GamerHash ecosystem" />
+  <img src="/images/hero.png" alt="GamerCoin (GHX) — multi-chain utility token of the GamerHash ecosystem" />
 </Frame>
 
 GHX is the native utility token of [GamerHash](https://gamerhash.com) — the network that turns idle consumer GPUs into compute for AI workloads. The token isn't an abstract claim on a future product. It is the settlement layer for a distributed compute network already serving real users, real partners, and real AI applications.
@@ -25,23 +25,9 @@ GHX is the native utility token of [GamerHash](https://gamerhash.com) — the ne
 
 ## How the GHX economy works
 
-```mermaid
-graph LR
-    U([App users]):::user
-    D{{DePIN GPU network}}:::depin
-    G((GHX)):::token
-    P([Partners & developers]):::partner
-
-    U -->|Share idle GPU| D
-    D -->|Compute supply| P
-    P -->|Pay for compute| G
-    G -->|Buyback & burn<br/>Rewards & APR| U
-
-    classDef user fill:#2AD46F,stroke:#1FB85C,color:#0F1115
-    classDef depin fill:#E83C41,stroke:#C53034,color:#fff
-    classDef token fill:#F59E0B,stroke:#D97706,color:#0F1115
-    classDef partner fill:#9945FF,stroke:#7e2bdc,color:#fff
-```
+<Frame>
+  <img src="/images/economy-flow.png" alt="GHX economy flow: app users share idle GPU, DePIN GPU network supplies compute to partners and developers, who pay GHX, a portion of which is used for buyback and burn, plus rewards and APR back to users" />
+</Frame>
 
 Users contribute GPU power. The DePIN aggregates and routes it to AI workloads. Partners and developers pay for compute. A portion of revenue is used to buy GHX from the open market and burn it; the rest is distributed to contributors. The loop self-reinforces as more partners join.
 
@@ -108,11 +94,11 @@ The team publishes monthly community updates and deep-dives on [Medium](https://
 
 ## What this documentation covers
 
-- **Tokenomics** — supply, distribution, burn, staking, liquidity programs, contracts.
-- **Use cases** — partner integrations and educational programs powered by GHX.
-- **Tutorials** — end-to-end guides for the most common operations.
-- **Roadmap** — what shipped, what's next.
-- **Resources** — live data, glossary, useful links.
-- **Legal** — whitepaper notices, AML/CFT policy, disclaimer.
+- **Tokenomics** — the full picture of GHX: supply, distribution, burns, staking and liquidity programs, plus contract addresses across every chain.
+- **Use cases** — how partners build with GHX, and how the community earns through education and tasks.
+- **Tutorials** — step-by-step walkthroughs for the most common operations, written so a first-time user can finish them in one sitting.
+- **Roadmap** — a quarterly delivery log: what we've shipped, what's actively in flight, and where we're going.
+- **Resources** — live market data, a glossary of crypto terms, and a hand-picked list of links across the ecosystem.
+- **Legal** — whitepaper-derived notices, AML/CFT policy, and the official disclaimer.
 
-For documentation about the GamerHash platform itself (apps, AI, miner technology), see the [GamerHash docs](https://docs.gamerhash.com).
+Looking for the GamerHash platform itself — apps, AI, and the wider ecosystem? Head to the [GamerHash docs](https://docs.gamerhash.com).
